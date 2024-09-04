@@ -26,6 +26,11 @@ header nav {
 header nav h1 {
   width: 150px;
   height: 100%;
+  margin-left: 30px;
+}
+header nav .rnb {
+  display: flex;
+  align-items: center;
 }
 
 h1 img {
