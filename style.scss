@@ -3,12 +3,10 @@
 body {
   font-family: "Noto Sans KR";
 }
-
 a {
   all: unset;
   cursor: pointer;
 }
-
 header {
   width: 100%;
   height: 100px;
@@ -17,21 +15,20 @@ header {
   font-family: "IBM Plex Sans KR";
   box-shadow: 0 0 2px 0 gray;
   z-index: 10;
-}
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header nav h1 {
-  width: 150px;
-  height: 100%;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      width: 150px;
+      height: 100%;
+    }
+  }
 }
 
 h1 img {
   width: 100%;
 }
-
 @media (max-width: 1280px) {
   section video {
     width: 1280px;
@@ -44,44 +41,35 @@ h1 img {
   overflow: hidden;
   display: flex;
   justify-content: space-around;
-}
-@media (max-width: 1280px) {
-  .gnb {
+  @media (max-width: 1280px) {
     display: none;
   }
 }
-
 .nav_top {
   padding: 40px 30px;
   font-size: 1.2em;
 }
-
 .nav_top > a {
   color: #000;
   padding-left: 40px;
 }
-
 .lang {
   display: flex;
   width: 100px;
   font-size: 1.2em;
 }
-
 .lang li {
   padding: 0 10px;
   margin-bottom: 3px;
 }
-
 .lang li a {
   color: #868585;
 }
-
 .hamburger {
   margin: 0 50px 0 0;
   cursor: pointer;
   filter: brightness(0);
 }
-
 .depth {
   position: absolute;
   width: 360px;
@@ -91,16 +79,13 @@ h1 img {
   top: 100px;
   overflow: hidden;
 }
-
 .depth li:hover {
   filter: brightness(70%);
 }
-
 .depth a {
   color: black;
   padding-left: 20px;
 }
-
 .depth li {
   width: 180px;
   height: 60px;
@@ -109,11 +94,9 @@ h1 img {
   box-shadow: 1px 1px 2px 1px rgb(92, 92, 92);
   font-size: 0.8em;
 }
-
 nav li:hover .depth {
   height: 360px;
 }
-
 .depth2 {
   position: absolute;
   width: 180px;
@@ -124,7 +107,6 @@ nav li:hover .depth {
   opacity: 80%;
   overflow: hidden;
 }
-
 .depth li:hover .depth2 {
   height: auto;
 }
@@ -132,7 +114,6 @@ nav li:hover .depth {
 aside a {
   color: rgb(5, 5, 5);
 }
-
 .cs {
   border: 1px solid rgb(206, 206, 206);
   border-radius: 100px;
@@ -148,7 +129,6 @@ aside a {
   font-size: 0.8em;
   line-height: 20px;
 }
-
 .CJ_talk {
   border-radius: 100px;
   width: 75px;
@@ -164,11 +144,9 @@ aside a {
   line-height: 20px;
   z-index: 100;
 }
-
 .CJ_talk img {
   width: 30px;
 }
-
 .top_btn {
   border: 0.1px solid rgb(206, 206, 206);
   border-radius: 100px;
@@ -198,11 +176,9 @@ aside a {
   display: flex;
   background-color: #fff;
 }
-
 .menu_nav h1 img {
   width: 150px;
 }
-
 .menu_nav h1 {
   position: absolute;
   top: 0;
@@ -216,32 +192,26 @@ aside a {
   display: flex;
   align-items: center;
 }
-
 .menu_aside > div {
   padding: 40px;
   color: white;
 }
-
 .menu_aside a {
   color: white;
 }
-
 .menu_aside h2 {
   font-size: 4em;
   margin-bottom: 30px;
 }
-
 .menu_X {
   position: absolute;
   top: 35px;
   right: 45px;
   cursor: pointer;
 }
-
 .menu_X img {
   width: 25px;
 }
-
 .menu_nav_inner {
   padding: 100px;
   margin-top: 50px;
@@ -250,54 +220,42 @@ aside a {
   grid-template-rows: repeat(2, 1fr);
   gap: 40px;
 }
-
 .menu_nav_inner > div {
   width: 150px;
 }
-
 .menu_nav_inner > div > a {
   color: #075d46;
   font-size: 1.3em;
   font-family: "IBM Plex Sans KR";
   font-weight: 100;
 }
-
 .menu_nav_inner > div:nth-of-type(1) {
   grid-row: 1/3;
 }
-
 .menu_nav_inner > div:nth-of-type(2) {
   grid-row: 1/3;
 }
-
 .menu_nav_inner > div:nth-of-type(3) {
   grid-row: 1/3;
 }
-
 .menu_nav_inner > div:nth-of-type(4) {
   grid-row: 1/3;
 }
-
 .menu_nav_inner > div:nth-of-type(5) {
   grid-row: 1/2;
 }
-
 .menu_nav_inner > div:nth-of-type(6) {
   grid-area: 2/5/3/5;
 }
-
 .menu_nav_inner div ul {
   padding-top: 20px;
 }
-
 .menu_nav_inner div ul > a {
   color: black;
 }
-
 .menu_nav_inner div ul li {
   padding: 5px;
 }
-
 .menu_nav_inner div ul li > a {
   color: gray;
 }
@@ -313,25 +271,21 @@ video {
   padding: 100px 0;
   position: relative;
 }
-
 .business h2 {
   color: orange;
   font-size: 1em;
   font-weight: 100;
 }
-
 .swip > h3 {
   font-size: 4em;
   font-weight: 100;
 }
-
 .swip_btn {
   display: flex;
   position: absolute;
   right: 0;
   top: 100px;
 }
-
 .swip_btn > div {
   border: 1px solid rgb(202, 202, 202);
   padding: 10px;
@@ -339,7 +293,6 @@ video {
   color: gray;
   cursor: pointer;
 }
-
 .swip_btn > div:hover {
   background-color: #2a7c31;
   color: white;
@@ -353,19 +306,15 @@ video {
   word-spacing: 0.1em;
   overflow: hidden;
 }
-
 .slide a {
   color: white;
 }
-
 .slide li {
   display: flex;
 }
-
 .slide_left img {
   width: 680px;
 }
-
 .slide_right {
   width: 600px;
   background-color: rgb(240, 240, 240);
@@ -373,13 +322,11 @@ video {
   padding: 60px;
   box-sizing: border-box;
 }
-
 .slide_right h3 {
   color: #075d46;
   font-size: 1em;
   margin-bottom: 20px;
 }
-
 .slide_right h4 {
   color: #000;
   word-spacing: -1px;
@@ -389,7 +336,6 @@ video {
   padding-bottom: 20px;
   border-bottom: 3px solid gray;
 }
-
 .btn {
   padding: 5px 20px;
   text-align: center;
@@ -400,7 +346,6 @@ video {
   background-color: rgb(43, 68, 36);
   border: 1px solid rgb(26, 48, 26);
 }
-
 .btn:hover {
   margin-bottom: 1px;
   box-shadow: 2px 5px 10px 0 rgb(92, 92, 92);
@@ -411,29 +356,24 @@ video {
   width: 100%;
   margin: 0 auto;
 }
-
 .ESG_box {
   width: 1280px;
   margin: 0 auto;
   padding: 100px 0;
 }
-
 .ESG h2 {
   color: orange;
   font-size: 1em;
   font-weight: 100;
 }
-
 .ESG h3 {
   font-size: 4em;
   font-weight: 100;
 }
-
 .ESG h4 {
   font-size: 1em;
   transition-duration: 1s;
 }
-
 .ESG ul li h5 {
   position: relative;
   width: 700px;
@@ -459,34 +399,54 @@ video {
 }
 
 .ESG ul li:nth-of-type(1) {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0)), url(img/wind-generator-g15572cebd_1920.jpg) no-repeat fixed;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgb(255, 255, 255, 0)
+    ),
+    url(img/wind-generator-g15572cebd_1920.jpg) no-repeat fixed;
   background-size: cover;
 }
-
 .ESG ul li:nth-of-type(2) {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0)), url(img/philosophy_img_1_waifu2x_noise3_scale2x.png) no-repeat fixed;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgb(255, 255, 255, 0)
+    ),
+    url(img/philosophy_img_1_waifu2x_noise3_scale2x.png) no-repeat fixed;
   background-size: cover;
 }
-
 .ESG ul li:nth-of-type(3) {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0)), url(img/shoes-gb2610cc94_1920.jpg) no-repeat fixed;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgb(255, 255, 255, 0)
+    ),
+    url(img/shoes-gb2610cc94_1920.jpg) no-repeat fixed;
   background-size: cover;
 }
-
 .ESG ul li:nth-of-type(4) {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0)), url(img/marcin-jozwiak-8tKZFUjC99c-unsplash.jpg) no-repeat fixed;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgb(255, 255, 255, 0)
+    ),
+    url(img/marcin-jozwiak-8tKZFUjC99c-unsplash.jpg) no-repeat fixed;
   background-size: cover;
 }
-
 .ESG ul li:nth-of-type(5) {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0)), url(img/night-background-night-starry-sky-night-sky-with-stars_559531-8141.jpg) no-repeat fixed;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgb(255, 255, 255, 0)
+    ),
+    url(img/night-background-night-starry-sky-night-sky-with-stars_559531-8141.jpg)
+      no-repeat fixed;
   background-size: cover;
 }
-
 .ESG ul li:hover {
   box-shadow: inset 1280px 1280px 1280px 1280px rgba(20, 20, 20, 0.7);
 }
-
 .ESG ul li:hover h4 {
   font-size: 0.6em;
 }
@@ -496,24 +456,20 @@ video {
   width: 100%;
   padding: 100px 0;
 }
-
 .IR_box {
   width: 1280px;
   margin: 0 auto;
 }
-
 .IR_box h2 {
   color: orange;
   font-size: 1em;
   font-weight: 100;
 }
-
 .IR_box h3 {
   font-size: 4em;
   font-weight: 100;
   color: white;
 }
-
 .IR_content {
   display: flex;
   justify-content: space-between;
@@ -528,11 +484,9 @@ video {
   padding: 50px;
   box-shadow: 0 1px 10px 0 rgb(44, 44, 44);
 }
-
 .IR_left h4 {
   font-size: 2em;
 }
-
 .IR_left span {
   color: green;
   font-size: 1.4rem;
@@ -542,19 +496,16 @@ video {
   display: flex;
   align-items: center;
 }
-
 .price {
   font-size: 4em;
   margin-right: 20px;
 }
-
 .trade {
   display: flex;
   width: 900px;
   margin-top: 30px;
   flex-wrap: wrap;
 }
-
 .trade li {
   width: 300px;
   display: flex;
@@ -566,7 +517,6 @@ video {
   flex-flow: column;
   align-items: center;
 }
-
 .IR_right ul li {
   display: flex;
   justify-content: center;
@@ -579,11 +529,9 @@ video {
   padding: 10px;
   box-sizing: border-box;
 }
-
 .IR_right ul li span {
   padding: 0 50px 0 10px;
 }
-
 .IR_right ul li:nth-of-type(1) i {
   width: 40px;
   height: 40px;
@@ -593,7 +541,6 @@ video {
   background-position: 0 -340px;
   display: block;
 }
-
 .IR_right ul li:nth-of-type(2) i {
   width: 40px;
   height: 40px;
@@ -603,7 +550,6 @@ video {
   background-position: -50px -340px;
   display: block;
 }
-
 .IR_right ul li:nth-of-type(3) i {
   width: 40px;
   height: 40px;
@@ -613,44 +559,37 @@ video {
   background-position: -100px -340px;
   display: block;
 }
-
 .PRESS {
   width: 1280px;
   height: 800px;
   padding: 100px 0;
   margin: 0 auto;
 }
-
 .PRESS > h2 {
   color: orange;
   font-size: 1em;
   font-weight: 100;
 }
-
 .PRESS > h3 {
   font-size: 4em;
   font-weight: 100;
 }
-
 .post {
   display: flex;
   flex-flow: column;
   margin-top: 50px;
 }
-
 .post li {
   padding: 30px 0;
   border-top: 1px solid rgb(216, 216, 216);
   line-height: 30px;
 }
-
 .post li > div {
   float: left;
   margin-right: 20px;
   color: #075d46;
   font-size: 1.2em;
 }
-
 .post li > p {
   margin-left: 60px;
 }
@@ -658,18 +597,15 @@ video {
 .CS_center {
   background-color: rgb(212, 212, 212);
 }
-
 .CS_box {
   width: 1280px;
   padding: 100px 0;
   margin: 0 auto;
 }
-
 .CS_box ul li i {
   margin-bottom: 20px;
   margin: 20px 0 20px 160px;
 }
-
 .business_center li:nth-of-type(1) i {
   width: 60px;
   height: 60px;
@@ -679,7 +615,6 @@ video {
   background-size: 300px auto;
   background-position: 0 -400px;
 }
-
 .business_center li:nth-of-type(2) i {
   width: 60px;
   height: 60px;
@@ -690,7 +625,6 @@ video {
   background-position: -60px -400px;
   margin-left: 160px;
 }
-
 .business_center li:nth-of-type(3) i {
   width: 60px;
   height: 60px;
@@ -701,11 +635,9 @@ video {
   background-position: -120px -400px;
   margin-left: 160px;
 }
-
 .business_center {
   margin-bottom: 20px;
 }
-
 .direct_center li:nth-of-type(1) i {
   width: 60px;
   height: 60px;
@@ -716,7 +648,6 @@ video {
   background-position: -180px -400px;
   margin-left: 160px;
 }
-
 .direct_center li:nth-of-type(2) i {
   width: 60px;
   height: 60px;
@@ -727,7 +658,6 @@ video {
   background-position: -240px -400px;
   margin-left: 160px;
 }
-
 .direct_center li:nth-of-type(3) i {
   width: 60px;
   height: 60px;
@@ -738,26 +668,22 @@ video {
   background-position: 0px -460px;
   margin-left: 160px;
 }
-
 .CS_box h2 {
   color: orange;
   font-size: 1em;
   font-weight: 100;
 }
-
 .CS_box h3 {
   font-size: 4em;
   font-weight: 100;
   margin-bottom: 30px;
 }
-
 .CS_box ul {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
   font-weight: 1000;
 }
-
 .CS_box ul li {
   width: 380px;
   height: 150px;
@@ -770,19 +696,16 @@ video {
   position: relative;
   background-color: rgb(223, 223, 223);
 }
-
 .CS_box ul li a {
   color: white;
 }
-
 .CS_box ul li:hover div {
   left: 0;
 }
-
 .CS_box ul li div {
   width: 380px;
   height: 150px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(0, 0, 0, 0.8);
   text-align: center;
   line-height: 150px;
   left: 100%;
@@ -798,14 +721,12 @@ video {
   display: flex;
   margin: 0 auto;
 }
-
 .footer_left {
   width: 500px;
   padding-top: 50px;
   color: rgb(207, 207, 207);
   font-size: 1.3em;
 }
-
 .footer_logo img {
   width: 200px;
 }
@@ -816,31 +737,26 @@ video {
   display: flex;
   justify-content: space-between;
 }
-
 .footer_right ul {
   font-weight: bold;
   width: 150px;
 }
-
 .footer_right ul li {
   margin-top: 20px;
   width: 200px;
 }
-
 .footer_right ul li a {
   color: rgb(194, 194, 194);
   font-size: 0.9em;
 }
-
 .company_info {
   height: 50px;
   border-top: 1px solid rgb(194, 194, 194);
 }
-
 .address {
   font-size: 0.9em;
   line-height: 50px;
   color: rgb(194, 194, 194);
   width: 500px;
   margin: 0 auto;
-}/*# sourceMappingURL=style.css.map */
+}
