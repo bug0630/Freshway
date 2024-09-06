@@ -1,6 +1,6 @@
 jQuery(document).ready(function () {
   $(".hamburger").click(function () {
-    $(".menu_nav").css({ height: "100%" });
+    $(".menu_nav").css({ height: "100vh" });
   });
   $(".menu_X").click(function () {
     $(".menu_nav").css({ height: "0%" });
