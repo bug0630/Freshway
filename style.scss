@@ -715,41 +715,45 @@ video {
   position: absolute;
   transition: 0.3s;
 }
-
+// 푸터
 .footer_main {
-  width: 1280px;
-  height: 400px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1280px;
+  padding: 20px;
   background-color: white;
   display: flex;
+  justify-content: space-between;
   margin: 0 auto;
+  @media screen and (max-width: 978px) {
+    flex-direction: column;
+  }
 }
 .footer_left {
-  width: 500px;
-  padding-top: 50px;
   color: rgb(207, 207, 207);
-  font-size: 1.3em;
+  font-size: 20px;
+  @media screen and (max-width: 978px) {
+    display: none;
+  }
 }
 .footer_logo img {
   width: 200px;
 }
-
-.footer_right {
-  width: 700px;
-  padding-top: 50px;
+.fnb {
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
+  h5 {
+    font-size: 16px;
+  }
 }
-.footer_right ul {
-  font-weight: bold;
-  width: 150px;
-}
-.footer_right ul li {
+.fnb ul li {
   margin-top: 20px;
-  width: 200px;
+  width: 150px;
+  font-size: 14px;
 }
-.footer_right ul li a {
+.fnb ul li a {
   color: rgb(194, 194, 194);
-  font-size: 0.9em;
 }
 .company_info {
   height: 50px;
