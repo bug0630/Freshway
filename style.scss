@@ -18,6 +18,7 @@ a {
 $header-font: clamp(20px, 1.2vw, 28px);
 $cj-yellow: #ff9700;
 $main-color: #005b45;
+$box-padding: clamp(20px, 3vw, 40px);
 header {
   width: 100%;
   height: clamp(60px, 10vw, 100px);
@@ -265,7 +266,6 @@ header {
 
 video {
   width: 100%;
-  position: relative;
 }
 
 .business {
@@ -720,7 +720,7 @@ video {
   box-sizing: border-box;
   width: 100%;
   max-width: 1280px;
-  padding: 20px;
+  padding: $box-padding;
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -732,37 +732,76 @@ video {
 .footer_left {
   color: rgb(207, 207, 207);
   font-size: 20px;
+  h2 {
+    @media screen and (max-width: 978px) {
+      display: none;
+    }
+  }
   @media screen and (max-width: 978px) {
-    display: none;
+    width: 100%;
   }
 }
-.footer_logo img {
+.footer_logo {
+  margin: auto;
   width: 200px;
+}
+.footer_logo img {
+  width: 100%;
 }
 .fnb {
   font-weight: bold;
   display: flex;
   justify-content: space-between;
-  h5 {
-    font-size: 16px;
+  li {
+    width: 100%;
+    @media screen and (max-width: 978px) {
+      text-align: center;
+      &:hover .lnb {
+        height: auto;
+        border-top: 1px solid rgb(233, 233, 233);
+      }
+    }
+  }
+  @media screen and (max-width: 978px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lnb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 0;
+    width: 140px;
+    font-size: 14px;
+    a {
+      color: rgb(194, 194, 194);
+      width: 100%;
+      &:hover {
+        color: $main-color;
+      }
+    }
+    li {
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+    }
+    @media screen and (max-width: 978px) {
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      text-align: center;
+    }
   }
 }
-.fnb ul li {
-  margin-top: 20px;
-  width: 150px;
-  font-size: 14px;
-}
-.fnb ul li a {
-  color: rgb(194, 194, 194);
-}
 .company_info {
+  padding: $box-padding;
   height: 50px;
   border-top: 1px solid rgb(194, 194, 194);
 }
 .address {
   font-size: 0.9em;
   line-height: 50px;
-  color: rgb(194, 194, 194);
-  width: 500px;
+  color: rgb(70, 70, 70);
   margin: 0 auto;
 }

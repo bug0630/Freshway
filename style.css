@@ -271,7 +271,6 @@ header nav .menu_nav_inner div ul li > a {
 
 video {
   width: 100%;
-  position: relative;
 }
 
 .business {
@@ -761,7 +760,7 @@ video {
   box-sizing: border-box;
   width: 100%;
   max-width: 1280px;
-  padding: 20px;
+  padding: clamp(20px, 3vw, 40px);
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -778,13 +777,23 @@ video {
   font-size: 20px;
 }
 @media screen and (max-width: 978px) {
-  .footer_left {
+  .footer_left h2 {
     display: none;
   }
 }
+@media screen and (max-width: 978px) {
+  .footer_left {
+    width: 100%;
+  }
+}
+
+.footer_logo {
+  margin: auto;
+  width: 200px;
+}
 
 .footer_logo img {
-  width: 200px;
+  width: 100%;
 }
 
 .fnb {
@@ -792,21 +801,55 @@ video {
   display: flex;
   justify-content: space-between;
 }
-.fnb h5 {
-  font-size: 16px;
+.fnb li {
+  width: 100%;
 }
-
-.fnb ul li {
-  margin-top: 20px;
-  width: 150px;
+@media screen and (max-width: 978px) {
+  .fnb li {
+    text-align: center;
+  }
+  .fnb li:hover .lnb {
+    height: auto;
+    border-top: 1px solid rgb(233, 233, 233);
+  }
+}
+@media screen and (max-width: 978px) {
+  .fnb {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.fnb .lnb {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px 0;
+  width: 140px;
   font-size: 14px;
 }
-
-.fnb ul li a {
+.fnb .lnb a {
   color: rgb(194, 194, 194);
+  width: 100%;
+}
+.fnb .lnb a:hover {
+  color: #005b45;
+}
+.fnb .lnb li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+@media screen and (max-width: 978px) {
+  .fnb .lnb {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+  }
 }
 
 .company_info {
+  padding: clamp(20px, 3vw, 40px);
   height: 50px;
   border-top: 1px solid rgb(194, 194, 194);
 }
@@ -814,7 +857,6 @@ video {
 .address {
   font-size: 0.9em;
   line-height: 50px;
-  color: rgb(194, 194, 194);
-  width: 500px;
+  color: rgb(70, 70, 70);
   margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
