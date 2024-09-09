@@ -632,7 +632,7 @@ video {
     display: block;
   }
   li {
-    width: clamp(200px, 28vw, 400px);
+    width: clamp(200px, 28vw, 360px);
     padding: 10px;
     overflow: hidden;
     box-shadow: 1px 2px 2px 0 rgb(141, 141, 141);
@@ -663,7 +663,6 @@ video {
     }
   }
 }
-
 .counseling li:nth-of-type(1) i {
   background-image: url(img/icons.png);
   background-repeat: no-repeat;
