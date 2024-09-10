@@ -75,4 +75,17 @@ jQuery(document).ready(function () {
       $(".ESG h5").eq(4).css({ left: "35%" });
     }
   });
+  document.querySelectorAll(".fnb h5").forEach(function (h5) {
+    h5.addEventListener("click", function () {
+      const lnb = this.nextElementSibling; // h5의 다음 형제 요소인 lnb 선택
+      const currentDisplay = window.getComputedStyle(lnb).display;
+
+      // display가 'none'이면 'block'으로, 그렇지 않으면 'none'으로 설정
+      if (currentDisplay === "none") {
+        lnb.style.display = "block";
+      } else {
+        lnb.style.display = "none";
+      }
+    });
+  });
 });
