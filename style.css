@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@500&family=IBM+Plex+Sans+KR:wght@500&family=Nanum+Gothic&display=swap");
 body {
@@ -779,19 +780,19 @@ video {
     gap: 10px;
   }
 }
-.fnb li.active .lnb {
-  height: auto;
-}
 .fnb li {
   width: 100%;
+}
+.fnb li:hover .lnb {
+  height: auto;
 }
 @media screen and (max-width: 768px) {
   .fnb li {
     text-align: center;
   }
 }
-.fnb h5 {
-  height: 100%;
+.fnb .active {
+  height: auto; /* 또는 정확한 높이로 설정 가능 */
 }
 .fnb .lnb {
   display: flex;
@@ -824,13 +825,12 @@ video {
 
 .company_info {
   padding: 0 clamp(20px, 3vw, 40px);
-  height: 50px;
   border-top: 1px solid rgb(194, 194, 194);
+  display: flex;
+  align-items: center;
 }
 
 .address {
-  font-size: 0.9em;
-  line-height: 50px;
   color: rgb(70, 70, 70);
   margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */

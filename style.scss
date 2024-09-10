@@ -733,17 +733,17 @@ video {
     align-items: center;
     gap: 10px;
   }
-  li.active .lnb {
-    height: auto;
-  }
   li {
     width: 100%;
+    &:hover .lnb {
+      height: auto;
+    }
     @media screen and (max-width: 768px) {
       text-align: center;
     }
   }
-  h5 {
-    height: 100%;
+  .active {
+    height: auto; /* 또는 정확한 높이로 설정 가능 */
   }
   .lnb {
     display: flex;
@@ -774,12 +774,11 @@ video {
 }
 .company_info {
   padding: 0 $side-padding;
-  height: 50px;
   border-top: 1px solid rgb(194, 194, 194);
+  display: flex;
+  align-items: center;
 }
 .address {
-  font-size: 0.9em;
-  line-height: 50px;
   color: rgb(70, 70, 70);
   margin: 0 auto;
 }

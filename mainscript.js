@@ -75,24 +75,4 @@ jQuery(document).ready(function () {
       $(".ESG h5").eq(4).css({ left: "35%" });
     }
   });
-  document.querySelectorAll(".fnb h5").forEach(function (li) {
-    li.addEventListener("click", function () {
-      const parentLi = this.parentElement;
-      const lnb = parentLi.querySelector(".lnb");
-      if (parentLi.classList.contains("active")) {
-        lnb.style.height = "0";
-        parentLi.classList.remove("active");
-      } else {
-        // 모든 열려있는 항목 닫기
-        document
-          .querySelectorAll(".fnb li.active")
-          .forEach(function (activeLi) {
-            activeLi.querySelector(".lnb").style.height = "0";
-            activeLi.classList.remove("active");
-          });
-        lnb.style.height = lnb.scrollHeight + "px";
-        parentLi.classList.add("active");
-      }
-    });
-  });
 });
