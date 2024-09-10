@@ -782,6 +782,7 @@ video {
 }
 .fnb li {
   width: 100%;
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .fnb li {

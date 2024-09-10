@@ -737,6 +737,7 @@ video {
   }
   li {
     width: 100%;
+    cursor: pointer;
     @media screen and (max-width: 768px) {
       text-align: center;
     }
