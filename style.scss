@@ -9,6 +9,7 @@ a {
 }
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 .center {
   display: flex;
@@ -587,7 +588,7 @@ video {
 }
 
 .CS_center {
-  background-color: rgb(212, 212, 212);
+  background-color: rgb(226, 226, 226);
 }
 .CS_box {
   width: 100%;
@@ -737,9 +738,9 @@ video {
   }
   li {
     width: 100%;
-    cursor: pointer;
     @media screen and (max-width: 768px) {
       text-align: center;
+      cursor: pointer;
     }
   }
 
@@ -777,6 +778,7 @@ video {
   align-items: center;
 }
 .address {
-  color: rgb(70, 70, 70);
-  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
 }

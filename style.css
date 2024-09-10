@@ -11,6 +11,7 @@ a {
 
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .center {
@@ -612,7 +613,7 @@ video {
 }
 
 .CS_center {
-  background-color: rgb(212, 212, 212);
+  background-color: rgb(226, 226, 226);
 }
 
 .CS_box {
@@ -782,11 +783,11 @@ video {
 }
 .fnb li {
   width: 100%;
-  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .fnb li {
     text-align: center;
+    cursor: pointer;
   }
 }
 .fnb .lnb {
@@ -826,6 +827,7 @@ video {
 }
 
 .address {
-  color: rgb(70, 70, 70);
-  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */
