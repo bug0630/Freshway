@@ -737,6 +737,7 @@ footer {
   margin: 0 auto;
   font-size: clamp(14px, 2.3vw, 18px);
   font-weight: bold;
+  font-family: "IBM Plex Sans KR";
 }
 
 .footer-top {
@@ -794,11 +795,6 @@ footer {
   .footer_left {
     display: none;
   }
-}
-
-.footer_logo {
-  margin: auto;
-  width: 200px;
 }
 
 .footer_logo img {
@@ -873,9 +869,13 @@ footer {
   padding: clamp(20px, 3vw, 40px);
   border-top: 1px solid rgb(194, 194, 194);
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-.company_info img {
+.company_info .footer_logo {
+  width: 200px;
+}
+.company_info .footer_logo img {
   width: 100%;
 }
 @media screen and (max-width: 480px) {
@@ -887,4 +887,7 @@ footer {
 .address {
   text-align: center;
   font-weight: bold;
+  font-weight: 500;
+  font-size: 0.8em;
+  color: rgb(92, 92, 92);
 }/*# sourceMappingURL=style.css.map */

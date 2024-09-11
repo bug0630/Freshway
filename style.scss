@@ -702,6 +702,7 @@ footer {
   margin: 0 auto;
   font-size: clamp(14px, 2.3vw, 18px);
   font-weight: bold;
+  font-family: "IBM Plex Sans KR";
 }
 .footer-top {
   width: 100%;
@@ -719,6 +720,7 @@ footer {
   width: 100%;
   max-width: 800px;
   gap: 20px;
+
   li {
     padding: 10px 0;
   }
@@ -750,10 +752,6 @@ footer {
   @media screen and (max-width: 1024px) {
     display: none;
   }
-}
-.footer_logo {
-  margin: auto;
-  width: 200px;
 }
 .footer_logo img {
   width: 70%;
@@ -817,10 +815,15 @@ footer {
   padding: $side-padding;
   border-top: 1px solid rgb(194, 194, 194);
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  img {
-    width: 100%;
+  .footer_logo {
+    width: 200px;
+    img {
+      width: 100%;
+    }
   }
+
   @media screen and (max-width: 480px) {
     flex-direction: column;
   }
@@ -828,4 +831,7 @@ footer {
 .address {
   text-align: center;
   font-weight: bold;
+  font-weight: 500;
+  font-size: 0.8em;
+  color: rgb(92, 92, 92);
 }
