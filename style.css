@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@500&family=IBM+Plex+Sans+KR:wght@500&family=Nanum+Gothic&display=swap");
 body {
-  font-family: "Noto Sans KR";
+  font-family: "Noto Sans";
 }
 
 a {
@@ -35,7 +33,6 @@ header {
   height: clamp(60px, 10vw, 100px);
   position: fixed;
   top: 0;
-  font-family: "IBM Plex Sans KR";
   box-shadow: 0 0 2px 0 gray;
   z-index: 10;
   background-color: rgba(36, 36, 36, 0.3);
@@ -413,7 +410,6 @@ video {
   padding: 80px;
   cursor: pointer;
   margin-top: 20px;
-  font-family: "Noto Sans KR";
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -735,9 +731,8 @@ video {
 
 footer {
   margin: 0 auto;
-  font-size: clamp(14px, 2.3vw, 18px);
+  font-size: clamp(12px, 2vw, 16px);
   font-weight: bold;
-  font-family: "IBM Plex Sans KR";
 }
 
 .footer-top {
@@ -758,9 +753,6 @@ footer {
   max-width: 800px;
   gap: 20px;
 }
-.policy li {
-  padding: 10px 0;
-}
 @media screen and (max-width: 768px) {
   .policy {
     flex-wrap: wrap;
@@ -770,7 +762,7 @@ footer {
 .family {
   all: unset;
   width: 150px;
-  padding: 10px 0;
+  padding: 5px 0;
   text-align: center;
   border-bottom: 1px solid white;
 }
@@ -783,7 +775,6 @@ footer {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  font-family: "IBM Plex Sans KR";
 }
 
 .footer_left {
@@ -825,7 +816,8 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 0.8em;
+  font-size: 0.9em;
+  font-weight: normal;
   margin-top: 20px;
 }
 @media screen and (max-width: 480px) {
@@ -838,7 +830,7 @@ footer {
   }
 }
 .fnb .lnb a {
-  color: rgb(194, 194, 194);
+  color: rgb(97, 97, 97);
   width: 100%;
 }
 .fnb .lnb a:hover {
@@ -866,14 +858,14 @@ footer {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: clamp(20px, 3vw, 40px);
+  padding: 0 clamp(20px, 3vw, 40px);
   border-top: 1px solid rgb(194, 194, 194);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .company_info .footer_logo {
-  width: 200px;
+  width: 150px;
 }
 .company_info .footer_logo img {
   width: 100%;
