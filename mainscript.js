@@ -76,16 +76,12 @@ jQuery(document).ready(function () {
     }
   });
   function toggleLnbOnSmallScreen() {
-    if ($(window).width() <= 768) {
-      $(".fnb h5")
-        .off("click")
-        .on("click", function () {
-          let $lnb = $(this).next(); // h5의 다음 형제 요소인 lnb 선택
-          $lnb.toggle(); // display가 'none'이면 'block'으로, 그렇지 않으면 'none'으로 설정
-        });
-    } else {
-      $(".fnb h5").off("click"); // 화면 크기가 768px 이상일 때 클릭 이벤트 제거
-    }
+    $(".max480 h5")
+      .off("click")
+      .on("click", function () {
+        let $lnb = $(this).next(); // h5의 다음 형제 요소인 lnb 선택
+        $lnb.toggle(); // display가 'none'이면 'block'으로, 그렇지 않으면 'none'으로 설정
+      });
   }
 
   // 초기화 시 및 화면 크기 변경 시 실행

@@ -11,14 +11,20 @@ a {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
-.center {
+.flex-center {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 .opacity6 {
   opacity: 0.6;
 }
+
 $header-font: clamp(20px, 1.2vw, 28px);
 $cj-yellow: #ff9700;
 $main-color: #005b45;
@@ -216,25 +222,23 @@ header {
 }
 .cs {
   border: 1px solid rgb(206, 206, 206);
-  border-radius: 100px;
-  width: 75px;
-  height: 75px;
+  border-radius: 100%;
+  width: clamp(60px, 10vw, 75px);
+  aspect-ratio: 1/1;
   text-align: center;
-  padding-top: 15px;
+  font-size: clamp(12px, 2vw, 14px);
   position: fixed;
   bottom: 250px;
   right: 30px;
   background-color: white;
-  font-size: 0.8em;
   font-weight: bold;
   line-height: 20px;
 }
 .CJ_talk {
-  border-radius: 100px;
-  width: 75px;
-  height: 75px;
+  border-radius: 100%;
+  width: clamp(60px, 10vw, 75px);
+  aspect-ratio: 1/1;
   text-align: center;
-  padding-top: 20px;
   position: fixed;
   bottom: 150px;
   right: 30px;
@@ -247,16 +251,15 @@ header {
 }
 .top_btn {
   border: 0.1px solid rgb(206, 206, 206);
-  border-radius: 100px;
-  width: 75px;
-  height: 75px;
+  border-radius: 100%;
+  width: clamp(60px, 10vw, 75px);
+  aspect-ratio: 1/1;
+  font-size: clamp(12px, 2vw, 14px);
   text-align: center;
-  padding-top: 15px;
   position: fixed;
   bottom: 50px;
   right: 30px;
   color: white;
-  font-size: 0.8em;
   line-height: 20px;
   cursor: pointer;
   background-color: black;
@@ -695,24 +698,56 @@ video {
 }
 
 // 푸터
-.footer_main {
+footer {
+  margin: 0 auto;
+  font-size: clamp(14px, 2.3vw, 18px);
+  font-weight: bold;
+}
+.footer-top {
   width: 100%;
+  color: white;
+  background-color: $main-color;
+  .wrap {
+    max-width: 1280px;
+    padding: $side-padding;
+    gap: 20px;
+    margin: 0 auto;
+  }
+}
+.policy {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  gap: 20px;
+  li {
+    padding: 10px 0;
+  }
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+}
+.family {
+  all: unset;
+  width: 150px;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+.footer_main {
   max-width: 1280px;
+  width: 100%;
   padding: $side-padding;
   background-color: white;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   font-family: "IBM Plex Sans KR";
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-  }
 }
 .footer_left {
   width: 70%;
   color: rgb(207, 207, 207);
   font-size: 36px;
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 }
@@ -721,36 +756,30 @@ video {
   width: 200px;
 }
 .footer_logo img {
-  width: 100%;
+  width: 70%;
 }
-
 .fnb {
   width: 100%;
-  font-size: 20px;
-  font-weight: bold;
   display: flex;
   justify-content: space-between;
-  @media screen and (max-width: 768px) {
-    margin-top: 20px;
-    flex-direction: column;
-    align-items: center;
+  @media screen and (max-width: 480px) {
     gap: 20px;
+    flex-direction: column;
   }
   li {
     width: 100%;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 480px) {
       text-align: center;
       cursor: pointer;
     }
   }
-
   .lnb {
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: 0.8em;
     margin-top: 20px;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 480px) {
       width: 100%;
       display: none;
       overflow: hidden;
@@ -771,14 +800,32 @@ video {
     }
   }
 }
+.max480 {
+  @media screen and (min-width: 481px) {
+    display: none;
+  }
+}
+.up480 {
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+}
 .company_info {
-  padding: 0 $side-padding;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: $side-padding;
   border-top: 1px solid rgb(194, 194, 194);
   display: flex;
   align-items: center;
+  img {
+    width: 100%;
+  }
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 }
 .address {
-  width: 100%;
   text-align: center;
   font-weight: bold;
 }
