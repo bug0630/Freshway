@@ -752,13 +752,13 @@ footer {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     gap: 20px;
     flex-direction: column;
   }
   li {
     width: 100%;
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 768px) {
       text-align: center;
       cursor: pointer;
     }
@@ -770,7 +770,7 @@ footer {
     font-size: 0.9em;
     font-weight: normal;
     margin-top: 20px;
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 768px) {
       width: 100%;
       display: none;
       overflow: hidden;
@@ -791,13 +791,13 @@ footer {
     }
   }
 }
-.max480 {
-  @media screen and (min-width: 481px) {
+.max768 {
+  @media screen and (min-width: 769px) {
     display: none;
   }
 }
-.up480 {
-  @media screen and (max-width: 480px) {
+.up768 {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 }

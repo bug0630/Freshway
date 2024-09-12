@@ -797,7 +797,7 @@ footer {
   display: flex;
   justify-content: space-between;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .fnb {
     gap: 20px;
     flex-direction: column;
@@ -806,7 +806,7 @@ footer {
 .fnb li {
   width: 100%;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .fnb li {
     text-align: center;
     cursor: pointer;
@@ -820,7 +820,7 @@ footer {
   font-weight: normal;
   margin-top: 20px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .fnb .lnb {
     width: 100%;
     display: none;
@@ -842,14 +842,14 @@ footer {
   padding: 10px 0;
 }
 
-@media screen and (min-width: 481px) {
-  .max480 {
+@media screen and (min-width: 769px) {
+  .max768 {
     display: none;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .up480 {
+@media screen and (max-width: 768px) {
+  .up768 {
     display: none;
   }
 }

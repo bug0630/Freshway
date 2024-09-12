@@ -76,7 +76,7 @@ jQuery(document).ready(function () {
     }
   });
   function toggleLnbOnSmallScreen() {
-    $(".max480 h5")
+    $(".max768 h5")
       .off("click")
       .on("click", function () {
         let $lnb = $(this).next(); // h5의 다음 형제 요소인 lnb 선택
@@ -87,4 +87,23 @@ jQuery(document).ready(function () {
   // 초기화 시 및 화면 크기 변경 시 실행
   toggleLnbOnSmallScreen();
   $(window).on("resize", toggleLnbOnSmallScreen);
+
+  document.querySelectorAll("header button").forEach((button) => {
+    button.addEventListener("click", () => {
+      const drop = button.querySelector(".drop");
+      const icon = button.querySelector(".material-symbols-outlined");
+
+      if (drop) {
+        if (button.classList.contains("active")) {
+          drop.style.height = "0";
+          button.classList.remove("active");
+          if (icon) icon.classList.remove("rotate-270");
+        } else {
+          drop.style.height = `${drop.scrollHeight}px`;
+          button.classList.add("active");
+          if (icon) icon.classList.add("rotate-270");
+        }
+      }
+    });
+  });
 });
