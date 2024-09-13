@@ -684,7 +684,6 @@ video {
   left: 100%;
   top: 0;
   position: absolute;
-  transition: 0.3s ease-out;
 }
 
 .counseling li:nth-of-type(1) i {
@@ -806,11 +805,19 @@ footer {
 .fnb li {
   width: 100%;
 }
+.fnb li h5 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 @media screen and (max-width: 768px) {
   .fnb li {
-    text-align: center;
     cursor: pointer;
   }
+}
+.fnb .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  transform: rotate(90deg);
 }
 .fnb .lnb {
   display: flex;
@@ -823,9 +830,8 @@ footer {
 @media screen and (max-width: 768px) {
   .fnb .lnb {
     width: 100%;
-    display: none;
     overflow: hidden;
-    text-align: center;
+    height: 0;
     gap: 5px;
   }
 }
@@ -838,7 +844,6 @@ footer {
 }
 .fnb .lnb li {
   display: flex;
-  align-items: center;
   padding: 10px 0;
 }
 

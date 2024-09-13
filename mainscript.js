@@ -75,35 +75,32 @@ jQuery(document).ready(function () {
       $(".ESG h5").eq(4).css({ left: "35%" });
     }
   });
-  function toggleLnbOnSmallScreen() {
-    $(".max768 h5")
-      .off("click")
-      .on("click", function () {
-        let $lnb = $(this).next(); // h5의 다음 형제 요소인 lnb 선택
-        $lnb.toggle(); // display가 'none'이면 'block'으로, 그렇지 않으면 'none'으로 설정
-      });
-  }
+  $(".max768 h5")
+    .off("click")
+    .on("click", function () {
+      let $lnb = $(this).next(); // h5의 다음 형제 요소인 lnb 선택
+      let $arrow = $(this).find(".material-symbols-outlined"); // 클릭된 h5 내의 arrow 선택
+      if ($lnb.height() === 0) {
+        // auto 높이 계산
+        let autoHeight = $lnb.css("height", "auto").height();
 
-  // 초기화 시 및 화면 크기 변경 시 실행
-  toggleLnbOnSmallScreen();
-  $(window).on("resize", toggleLnbOnSmallScreen);
+        // height를 0으로 설정한 뒤, animate로 auto 높이만큼 변경
+        $lnb.height(0).animate({ height: autoHeight }, 300);
 
-  document.querySelectorAll("header button").forEach((button) => {
-    button.addEventListener("click", () => {
-      const drop = button.querySelector(".drop");
-      const icon = button.querySelector(".material-symbols-outlined");
+        // 화살표 270도 회전
+        $arrow.css({
+          transform: "rotate(270deg)",
+          transition: "transform 0.3s",
+        });
+      } else {
+        // height를 다시 0으로 설정하며 애니메이션
+        $lnb.animate({ height: "0" }, 300);
 
-      if (drop) {
-        if (button.classList.contains("active")) {
-          drop.style.height = "0";
-          button.classList.remove("active");
-          if (icon) icon.classList.remove("rotate-270");
-        } else {
-          drop.style.height = `${drop.scrollHeight}px`;
-          button.classList.add("active");
-          if (icon) icon.classList.add("rotate-270");
-        }
+        // 화살표 원상태로 회전
+        $arrow.css({
+          transform: "rotate(90deg)",
+          transition: "transform 0.3s",
+        });
       }
     });
-  });
 });

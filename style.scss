@@ -652,7 +652,6 @@ video {
       left: 100%;
       top: 0;
       position: absolute;
-      transition: 0.3s ease-out;
     }
   }
 }
@@ -758,10 +757,18 @@ footer {
   }
   li {
     width: 100%;
+    h5 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
     @media screen and (max-width: 768px) {
-      text-align: center;
       cursor: pointer;
     }
+  }
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    transform: rotate(90deg);
   }
   .lnb {
     display: flex;
@@ -772,9 +779,8 @@ footer {
     margin-top: 20px;
     @media screen and (max-width: 768px) {
       width: 100%;
-      display: none;
       overflow: hidden;
-      text-align: center;
+      height: 0;
       gap: 5px;
     }
     a {
@@ -786,7 +792,6 @@ footer {
     }
     li {
       display: flex;
-      align-items: center;
       padding: 10px 0;
     }
   }
