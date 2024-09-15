@@ -1,5 +1,7 @@
 body {
-  font-family: "Noto Sans";
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 a {
   all: unset;
@@ -9,6 +11,7 @@ a {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
+
 .flex-center {
   display: flex;
   justify-content: center;
@@ -27,6 +30,9 @@ $header-font: clamp(20px, 1.2vw, 28px);
 $cj-yellow: #ff9700;
 $main-color: #005b45;
 $side-padding: clamp(20px, 3vw, 40px);
+section {
+  padding: $side-padding;
+}
 header {
   width: 100%;
   height: clamp(60px, 10vw, 100px);
@@ -35,10 +41,7 @@ header {
   box-shadow: 0 0 2px 0 gray;
   z-index: 10;
   background-color: rgba(36, 36, 36, 0.3);
-  &:hover {
-    background-color: #f5f5f5;
-    color: black;
-  }
+
   nav {
     display: flex;
     padding: 0 $side-padding;
@@ -48,7 +51,7 @@ header {
     position: relative;
     color: white;
     &:hover {
-      background-color: #f5f5f5;
+      background-color: #ffffff;
       color: black;
     }
     h1 {
@@ -84,6 +87,7 @@ header {
         }
         &:hover .lnb li {
           opacity: 1;
+          transition-duration: 1.3s;
         }
         a {
           width: 100%;
@@ -107,13 +111,15 @@ header {
           width: 200px;
           height: 50px;
           opacity: 0;
-          transition-duration: 1.5s;
         }
         .depth {
           color: black;
         }
         .depth li {
           font-size: 16px;
+          &:hover {
+            font-weight: bold;
+          }
         }
       }
       @media (max-width: 1280px) {
@@ -233,7 +239,7 @@ header {
   bottom: 250px;
   right: 30px;
   background-color: white;
-  font-weight: bold;
+
   line-height: 20px;
 }
 .CJ_talk {
@@ -276,28 +282,33 @@ video {
   margin: auto;
   width: 100%;
   max-width: 1280px;
-  padding: $side-padding;
 }
 .business h2 {
   color: orange;
   font-size: 1em;
-  font-weight: 100;
 }
-.swip > h3 {
-  font-size: 4em;
-  font-weight: 100;
+h3 {
+  font-size: 36px;
+}
+.swip {
+  width: 100%;
 }
 .swip_btn {
+  width: 100%;
+  overflow: hidden;
   display: flex;
+  gap: 10px;
+  padding: 10px 0;
 }
-.swip_btn > div {
+.swip_btn li {
+  text-align: center;
   border: 1px solid rgb(202, 202, 202);
   padding: 10px;
-  margin-left: 5px;
   color: gray;
+  flex-shrink: 0;
   cursor: pointer;
 }
-.swip_btn > div:hover {
+.swip_btn li:hover {
   background-color: #2a7c31;
   color: white;
 }
@@ -305,45 +316,40 @@ video {
 .slide {
   transition: all 0.5s;
   width: 100%;
-  height: 445px;
-  letter-spacing: -1px;
-  word-spacing: 0.1em;
   overflow: hidden;
+  li {
+    display: none;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
 }
 .slide a {
   color: white;
 }
-.slide li {
-  display: flex;
-}
-.slide_left img {
-  width: 680px;
+.slide_left {
+  width: 100%;
+  img {
+    width: 100%;
+  }
 }
 .slide_right {
-  width: 600px;
+  width: 100%;
   background-color: rgb(240, 240, 240);
   color: #222222;
-  padding: 60px;
+  padding: $side-padding;
 }
 .slide_right h3 {
-  color: #075d46;
-  font-size: 1em;
-  margin-bottom: 20px;
+  color: $main-color;
+  padding: 10px 0;
 }
 .slide_right h4 {
-  color: #000;
-  word-spacing: -1px;
-  letter-spacing: -2px;
-  font-size: 2.8em;
-  margin-bottom: 120px;
-  padding-bottom: 20px;
   border-bottom: 3px solid gray;
 }
 .btn {
   padding: 5px 20px;
   text-align: center;
   font-size: 1.2em;
-  font-weight: 1000;
   background-color: rgb(43, 68, 36);
   border: 1px solid rgb(26, 48, 26);
 }
@@ -365,11 +371,9 @@ video {
 .ESG h2 {
   color: orange;
   font-size: 1em;
-  font-weight: 100;
 }
 .ESG h3 {
   font-size: 4em;
-  font-weight: 100;
 }
 .ESG h4 {
   font-size: 1em;
@@ -462,17 +466,14 @@ video {
 .IR_box h2 {
   color: orange;
   font-size: 1em;
-  font-weight: 100;
 }
 .IR_box h3 {
   font-size: 4em;
-  font-weight: 100;
   color: white;
 }
 .IR_content {
   display: flex;
   justify-content: space-between;
-  font-weight: 500;
 }
 
 .IR_left {
@@ -565,11 +566,9 @@ video {
 .PRESS > h2 {
   color: orange;
   font-size: 1em;
-  font-weight: 100;
 }
 .PRESS > h3 {
   font-size: 4em;
-  font-weight: 100;
 }
 .post {
   display: flex;
@@ -597,16 +596,13 @@ video {
 .CS_box {
   width: 100%;
   max-width: 1280px;
-  padding: $side-padding;
   margin: 0 auto;
   h2 {
     color: orange;
     font-size: 1em;
-    font-weight: 100;
   }
   h3 {
     font-size: 40px;
-    font-weight: 100;
     margin-bottom: 30px;
   }
   h4 {
@@ -616,7 +612,7 @@ video {
 .center {
   display: flex;
   justify-content: space-between;
-  font-weight: bold;
+
   @media screen and (max-width: 678px) {
     flex-direction: column;
     gap: 20px;
@@ -701,7 +697,9 @@ video {
 footer {
   margin: 0 auto;
   font-size: clamp(12px, 2vw, 16px);
-  font-weight: bold;
+  h5 {
+    font-weight: 600;
+  }
 }
 .footer-top {
   width: 100%;
@@ -719,11 +717,14 @@ footer {
   width: 100%;
   max-width: 800px;
   gap: 20px;
-
+  li:nth-of-type(1) {
+    font-weight: 900;
+  }
   @media screen and (max-width: 768px) {
     flex-wrap: wrap;
   }
 }
+
 .family {
   all: unset;
   width: 150px;
@@ -779,7 +780,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     font-size: 0.9em;
-    font-weight: normal;
+    font-weight: 400;
     margin-top: 20px;
     @media screen and (max-width: 768px) {
       width: 100%;
@@ -832,8 +833,6 @@ footer {
 }
 .address {
   text-align: center;
-  font-weight: bold;
-  font-weight: 500;
   font-size: 0.8em;
   color: rgb(92, 92, 92);
 }

@@ -5,44 +5,74 @@ jQuery(document).ready(function () {
   $(".menu_X").click(function () {
     $(".menu_nav").css({ height: "0%" });
   });
+  const swip = document.querySelector(".swip_btn");
+  let isDown = false;
+  let startX;
+  let scrollLeft;
 
+  swip.addEventListener("mousedown", (e) => {
+    isDown = true;
+    swip.classList.add("active");
+    startX = e.pageX - swip.offsetLeft;
+    scrollLeft = swip.scrollLeft;
+    swip.style.cursor = "grabbing";
+  });
+
+  swip.addEventListener("mouseleave", () => {
+    isDown = false;
+    swip.style.cursor = "grab";
+  });
+
+  swip.addEventListener("mouseup", () => {
+    isDown = false;
+    swip.style.cursor = "grab";
+  });
+
+  swip.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - swip.offsetLeft;
+    const walk = (x - startX) * 2; // 드래그 속도 조절
+    swip.scrollLeft = scrollLeft - walk;
+  });
+  $(".slide1").css({ display: "flex" });
   $(".swip_btn")
-    .find("div")
+    .find("li")
     .eq(0)
     .click(function () {
       $(".slide li").css({ display: "none" });
       $(".slide1").css({ display: "flex" });
     });
   $(".swip_btn")
-    .find("div")
+    .find("li")
     .eq(1)
     .click(function () {
       $(".slide li").css({ display: "none" });
       $(".slide2").css({ display: "flex" });
     });
   $(".swip_btn")
-    .find("div")
+    .find("li")
     .eq(2)
     .click(function () {
       $(".slide li").css({ display: "none" });
       $(".slide3").css({ display: "flex" });
     });
   $(".swip_btn")
-    .find("div")
+    .find("li")
     .eq(3)
     .click(function () {
       $(".slide li").css({ display: "none" });
       $(".slide4").css({ display: "flex" });
     });
   $(".swip_btn")
-    .find("div")
+    .find("li")
     .eq(4)
     .click(function () {
       $(".slide li").css({ display: "none" });
       $(".slide5").css({ display: "flex" });
     });
   $(".swip_btn")
-    .find("div")
+    .find("li")
     .eq(5)
     .click(function () {
       $(".slide li").css({ display: "none" });
