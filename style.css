@@ -423,6 +423,7 @@ h3 {
   font-size: clamp(24px, 4vw, 36px);
   height: 250px;
   padding: clamp(20px, 3vw, 40px);
+  border-radius: 20px;
   cursor: pointer;
   margin-top: 20px;
   display: flex;
@@ -697,7 +698,6 @@ h3 {
 @media screen and (max-width: 678px) {
   .center {
     flex-direction: column;
-    gap: 20px;
   }
 }
 .center i {
@@ -710,8 +710,9 @@ h3 {
 .center li {
   width: clamp(200px, 28vw, 360px);
   padding: 10px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 1px 1px 1px 0 rgb(141, 141, 141);
+  box-shadow: 1px 1px 5px 0 rgb(141, 141, 141);
   text-align: center;
   color: #075d46;
   font-size: 1.2em;
