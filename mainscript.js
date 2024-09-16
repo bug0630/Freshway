@@ -5,36 +5,37 @@ jQuery(document).ready(function () {
   $(".menu_X").click(function () {
     $(".menu_nav").css({ height: "0%" });
   });
-  const swip = document.querySelector(".swip_btn");
+
   let isDown = false;
   let startX;
   let scrollLeft;
 
-  swip.addEventListener("mousedown", (e) => {
+  $(".swip_btn").on("mousedown", function (e) {
     isDown = true;
-    swip.classList.add("active");
-    startX = e.pageX - swip.offsetLeft;
-    scrollLeft = swip.scrollLeft;
-    swip.style.cursor = "grabbing";
+    $(this).addClass("active");
+    startX = e.pageX - $(this).offset().left;
+    scrollLeft = $(this).scrollLeft();
+    $(this).css("cursor", "grabbing");
   });
 
-  swip.addEventListener("mouseleave", () => {
+  $(".swip_btn").on("mouseleave", function () {
     isDown = false;
-    swip.style.cursor = "grab";
+    $(this).css("cursor", "grab");
   });
 
-  swip.addEventListener("mouseup", () => {
+  $(".swip_btn").on("mouseup", function () {
     isDown = false;
-    swip.style.cursor = "grab";
+    $(this).css("cursor", "grab");
   });
 
-  swip.addEventListener("mousemove", (e) => {
+  $(".swip_btn").on("mousemove", function (e) {
     if (!isDown) return;
     e.preventDefault();
-    const x = e.pageX - swip.offsetLeft;
+    const x = e.pageX - $(this).offset().left;
     const walk = (x - startX) * 2; // 드래그 속도 조절
-    swip.scrollLeft = scrollLeft - walk;
+    $(this).scrollLeft(scrollLeft - walk);
   });
+
   $(".slide1").css({ display: "flex" });
   $(".swip_btn")
     .find("li")
@@ -79,32 +80,6 @@ jQuery(document).ready(function () {
       $(".slide6").css({ display: "flex" });
     });
 
-  $(window).scroll(function () {
-    if ($(window).scrollTop() < 1200) {
-      $(".ESG h5").fadeOut();
-      $(".ESG h5").css({ left: "100%" });
-    }
-    if ($(window).scrollTop() > 1200) {
-      $(".ESG h5").eq(0).fadeIn(1000);
-      $(".ESG h5").eq(0).css({ left: "45%" });
-    }
-    if ($(window).scrollTop() > 1550) {
-      $(".ESG h5").eq(1).fadeIn(1000);
-      $(".ESG h5").eq(1).css({ left: "45%" });
-    }
-    if ($(window).scrollTop() > 1900) {
-      $(".ESG h5").eq(2).fadeIn(1000);
-      $(".ESG h5").eq(2).css({ left: "45%" });
-    }
-    if ($(window).scrollTop() > 2250) {
-      $(".ESG h5").eq(3).fadeIn(1000);
-      $(".ESG h5").eq(3).css({ left: "30%" });
-    }
-    if ($(window).scrollTop() > 2600) {
-      $(".ESG h5").eq(4).fadeIn(1000);
-      $(".ESG h5").eq(4).css({ left: "35%" });
-    }
-  });
   $(".max768 h5")
     .off("click")
     .on("click", function () {
