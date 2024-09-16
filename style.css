@@ -340,11 +340,6 @@ video {
   cursor: pointer;
 }
 
-.swip_btn li:hover {
-  background-color: #005b45;
-  color: white;
-}
-
 .slide {
   transition: all 0.5s;
   width: 100%;

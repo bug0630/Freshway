@@ -31,13 +31,33 @@ jQuery(document).ready(function () {
   });
   $(".slide1").css({ display: "flex" });
   $(".swip_btn li").eq(0).css({ backgroundColor: "#005b45", color: "white" });
-  $(".swip_btn li").click(function () {
-    // 모든 버튼의 배경색과 글자 색 초기화
-    $(".swip_btn li").css({ backgroundColor: "", color: "" });
+  $(".swip_btn li").hover(
+    function () {
+      // 만약 클릭된 상태(active 클래스가 없는 경우)에만 hover 스타일 적용
+      if (!$(this).hasClass("active")) {
+        $(this).css({ backgroundColor: "#005b45", color: "white" });
+      }
+    },
+    function () {
+      // 만약 클릭되지 않은 상태(active 클래스가 없는 경우)에만 hover 스타일 제거
+      if (!$(this).hasClass("active")) {
+        $(this).css({ backgroundColor: "", color: "" });
+      }
+    }
+  );
 
-    // 클릭된 버튼에만 스타일 적용
-    $(this).css({ backgroundColor: "#005b45", color: "white" });
+  $(".swip_btn li").click(function () {
+    // 모든 버튼의 active 클래스 및 스타일 초기화
+    $(".swip_btn li")
+      .removeClass("active")
+      .css({ backgroundColor: "", color: "" });
+
+    // 클릭된 버튼에만 active 클래스와 스타일 적용
+    $(this)
+      .addClass("active")
+      .css({ backgroundColor: "#005b45", color: "white" });
   });
+
   $(".swip_btn")
     .find("li")
     .eq(0)
