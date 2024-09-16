@@ -306,7 +306,6 @@ h3 {
   width: 100%;
   overflow: hidden;
   display: flex;
-  gap: 10px;
   padding: 10px 0;
   position: relative;
 }
@@ -330,9 +329,11 @@ h3 {
 .swip_btn li {
   text-align: center;
   border: 1px solid rgb(202, 202, 202);
+  border-radius: 5px;
   padding: 10px;
   color: gray;
   flex-shrink: 0;
+  margin-right: 10px;
   cursor: pointer;
 }
 
@@ -419,8 +420,8 @@ h3 {
 
 .ESG ul li {
   color: #fff;
-  font-size: clamp(36px, 3vw, 48px);
-  height: 300px;
+  font-size: clamp(24px, 4vw, 36px);
+  height: 250px;
   padding: clamp(20px, 3vw, 40px);
   cursor: pointer;
   margin-top: 20px;
@@ -467,6 +468,11 @@ h3 {
 .ESG ul li:hover h4 {
   font-size: 0.6em;
 }
+@media (max-width: 768px) {
+  .ESG ul li:hover h4 {
+    display: none;
+  }
+}
 @media (min-width: 769px) {
   .ESG ul li:hover h5 {
     left: 25%;
@@ -474,6 +480,7 @@ h3 {
 }
 @media (max-width: 768px) {
   .ESG ul li:hover h5 {
+    display: block;
     top: 10%;
   }
 }
