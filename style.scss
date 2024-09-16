@@ -300,6 +300,33 @@ h3 {
   display: flex;
   gap: 10px;
   padding: 10px 0;
+  position: relative;
+  .left {
+    left: 0;
+    background: linear-gradient(
+      to right,
+      #ffffff 0%,
+      #ffffff 20%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  .right {
+    right: 0;
+    background: linear-gradient(
+      to left,
+      #ffffff 0%,
+      #ffffff 20%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  .gradient {
+    position: sticky;
+    flex-shrink: 0;
+    padding: 0;
+    height: 40px;
+    width: 10px;
+    border: none;
+  }
 }
 .swip_btn li {
   text-align: center;
@@ -377,20 +404,6 @@ h3 {
   padding: $side-padding;
   margin: 0 auto;
 }
-.ESG h2 {
-  color: orange;
-  font-size: 1em;
-}
-
-.ESG h4 {
-  transition-duration: 1s;
-}
-.ESG h5 {
-  position: relative;
-  left: 100%;
-  transition-duration: 1s;
-}
-
 .ESG ul li {
   color: #fff;
   font-size: clamp(36px, 3vw, 48px);
@@ -402,6 +415,47 @@ h3 {
   align-items: center;
   overflow: hidden;
   transition-duration: 2s;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.ESG h2 {
+  color: orange;
+  font-size: 1em;
+}
+
+.ESG h4 {
+  transition-duration: 1s;
+}
+.ESG h5 {
+  position: relative;
+  font-size: 0.8em;
+  transition-duration: 1s;
+  @media (min-width: 769px) {
+    left: 100%;
+  }
+  @media (max-width: 768px) {
+    top: 100%;
+  }
+}
+.ESG ul li:hover {
+  box-shadow: inset 1280px 1280px 1280px 1280px rgba(20, 20, 20, 0.7);
+  h4 {
+    font-size: 0.6em;
+    @media (max-width: 768px) {
+      // display: none;
+    }
+  }
+  h5 {
+    @media (min-width: 769px) {
+      left: 25%;
+    }
+    @media (max-width: 768px) {
+      top: 10%;
+    }
+  }
 }
 
 .ESG ul li:nth-of-type(1) {
@@ -449,15 +503,6 @@ h3 {
     url(img/night-background-night-starry-sky-night-sky-with-stars_559531-8141.jpg)
       no-repeat fixed;
   background-size: cover;
-}
-.ESG ul li:hover {
-  box-shadow: inset 1280px 1280px 1280px 1280px rgba(20, 20, 20, 0.7);
-  h4 {
-    font-size: 0.6em;
-  }
-  h5 {
-    left: 25%;
-  }
 }
 
 .IR {
@@ -616,10 +661,11 @@ h3 {
     margin: 10px 0;
   }
 }
+
 .center {
   display: flex;
   justify-content: space-between;
-
+  gap: 20px;
   @media screen and (max-width: 678px) {
     flex-direction: column;
     gap: 20px;

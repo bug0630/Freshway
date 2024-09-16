@@ -308,6 +308,23 @@ h3 {
   display: flex;
   gap: 10px;
   padding: 10px 0;
+  position: relative;
+}
+.swip_btn .left {
+  left: 0;
+  background: linear-gradient(to right, #ffffff 0%, #ffffff 20%, rgba(255, 255, 255, 0) 100%);
+}
+.swip_btn .right {
+  right: 0;
+  background: linear-gradient(to left, #ffffff 0%, #ffffff 20%, rgba(255, 255, 255, 0) 100%);
+}
+.swip_btn .gradient {
+  position: sticky;
+  flex-shrink: 0;
+  padding: 0;
+  height: 40px;
+  width: 10px;
+  border: none;
 }
 
 .swip_btn li {
@@ -400,21 +417,6 @@ h3 {
   margin: 0 auto;
 }
 
-.ESG h2 {
-  color: orange;
-  font-size: 1em;
-}
-
-.ESG h4 {
-  transition-duration: 1s;
-}
-
-.ESG h5 {
-  position: relative;
-  left: 100%;
-  transition-duration: 1s;
-}
-
 .ESG ul li {
   color: #fff;
   font-size: clamp(36px, 3vw, 48px);
@@ -426,6 +428,54 @@ h3 {
   align-items: center;
   overflow: hidden;
   transition-duration: 2s;
+}
+@media (max-width: 768px) {
+  .ESG ul li {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.ESG h2 {
+  color: orange;
+  font-size: 1em;
+}
+
+.ESG h4 {
+  transition-duration: 1s;
+}
+
+.ESG h5 {
+  position: relative;
+  font-size: 0.8em;
+  transition-duration: 1s;
+}
+@media (min-width: 769px) {
+  .ESG h5 {
+    left: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .ESG h5 {
+    top: 100%;
+  }
+}
+
+.ESG ul li:hover {
+  box-shadow: inset 1280px 1280px 1280px 1280px rgba(20, 20, 20, 0.7);
+}
+.ESG ul li:hover h4 {
+  font-size: 0.6em;
+}
+@media (min-width: 769px) {
+  .ESG ul li:hover h5 {
+    left: 25%;
+  }
+}
+@media (max-width: 768px) {
+  .ESG ul li:hover h5 {
+    top: 10%;
+  }
 }
 
 .ESG ul li:nth-of-type(1) {
@@ -451,16 +501,6 @@ h3 {
 .ESG ul li:nth-of-type(5) {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0)), url(img/night-background-night-starry-sky-night-sky-with-stars_559531-8141.jpg) no-repeat fixed;
   background-size: cover;
-}
-
-.ESG ul li:hover {
-  box-shadow: inset 1280px 1280px 1280px 1280px rgba(20, 20, 20, 0.7);
-}
-.ESG ul li:hover h4 {
-  font-size: 0.6em;
-}
-.ESG ul li:hover h5 {
-  left: 25%;
 }
 
 .IR {
@@ -645,6 +685,7 @@ h3 {
 .center {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 @media screen and (max-width: 678px) {
   .center {
