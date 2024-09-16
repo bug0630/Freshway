@@ -25,7 +25,12 @@ a {
 .opacity6 {
   opacity: 0.6;
 }
-
+h3 {
+  font-size: clamp(20px, 3vw, 36px);
+}
+h4 {
+  font-size: clamp(16px, 2.8vw, 24px);
+}
 $header-font: clamp(20px, 1.2vw, 28px);
 $cj-yellow: #ff9700;
 $main-color: #005b45;
@@ -288,9 +293,7 @@ video {
   color: orange;
   font-size: 1em;
 }
-h3 {
-  font-size: clamp(30px, 4vw, 40px);
-}
+
 .swip {
   width: 100%;
 }
@@ -374,26 +377,27 @@ h3 {
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
-  color: #222222;
+
   padding: $side-padding;
 }
 .slide_right h3 {
   color: $main-color;
   padding: 10px 0;
 }
-.slide_right h4 {
-  font-size: 20px;
-}
+
 .btn {
-  padding: 5px 20px;
+  padding: 10px;
   border-radius: 5px;
   text-align: center;
   background-color: rgb(43, 68, 36);
   border: 1px solid rgb(26, 48, 26);
+  @media (max-width: 768px) {
+    // width: 50%;
+  }
 }
 .btn:hover {
   margin-bottom: 1px;
-  box-shadow: 2px 5px 10px 0 rgb(92, 92, 92);
+  box-shadow: 2px 2px 5px 0 rgb(92, 92, 92);
 }
 
 .ESG {
@@ -425,13 +429,12 @@ h3 {
 
 .ESG h2 {
   color: orange;
-  font-size: 1em;
 }
 
-.ESG h4 {
+.ESG h3 {
   transition-duration: 1s;
 }
-.ESG h5 {
+.ESG h4 {
   position: relative;
   font-size: 0.8em;
   transition-duration: 1s;
@@ -444,13 +447,13 @@ h3 {
 }
 .ESG ul li:hover {
   box-shadow: inset 1280px 1280px 1280px 1280px rgba(20, 20, 20, 0.7);
-  h4 {
+  h3 {
     font-size: 0.6em;
     @media (max-width: 768px) {
       display: none;
     }
   }
-  h5 {
+  h4 {
     @media (min-width: 769px) {
       left: 25%;
     }
@@ -651,13 +654,11 @@ h3 {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: $side-padding;
   h2 {
     color: orange;
     font-size: 1em;
   }
   h3 {
-    font-size: 40px;
     margin-bottom: 30px;
   }
   h4 {
