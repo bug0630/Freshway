@@ -10,28 +10,22 @@ jQuery(document).ready(function () {
   let startX;
   let scrollLeft;
 
-  $(".swip_btn").on("mousedown", function (e) {
+  $(".swip_btn").on("mousedown touchstart", function (e) {
     isDown = true;
-    $(this).addClass("active");
-    startX = e.pageX - $(this).offset().left;
+    startX =
+      (e.pageX || e.originalEvent.touches[0].pageX) - $(this).offset().left;
     scrollLeft = $(this).scrollLeft();
-    $(this).css("cursor", "grabbing");
   });
 
-  $(".swip_btn").on("mouseleave", function () {
+  $(".swip_btn").on("mouseleave touchend mouseup", function () {
     isDown = false;
-    $(this).css("cursor", "grab");
   });
 
-  $(".swip_btn").on("mouseup", function () {
-    isDown = false;
-    $(this).css("cursor", "grab");
-  });
-
-  $(".swip_btn").on("mousemove", function (e) {
+  $(".swip_btn").on("mousemove touchmove", function (e) {
     if (!isDown) return;
     e.preventDefault();
-    const x = e.pageX - $(this).offset().left;
+    const x =
+      (e.pageX || e.originalEvent.touches[0].pageX) - $(this).offset().left;
     const walk = (x - startX) * 2; // 드래그 속도 조절
     $(this).scrollLeft(scrollLeft - walk);
   });
