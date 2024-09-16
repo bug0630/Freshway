@@ -29,8 +29,15 @@ jQuery(document).ready(function () {
     const walk = (x - startX) * 2; // 드래그 속도 조절
     $(this).scrollLeft(scrollLeft - walk);
   });
-
   $(".slide1").css({ display: "flex" });
+  $(".swip_btn li").eq(0).css({ backgroundColor: "#005b45", color: "white" });
+  $(".swip_btn li").click(function () {
+    // 모든 버튼의 배경색과 글자 색 초기화
+    $(".swip_btn li").css({ backgroundColor: "", color: "" });
+
+    // 클릭된 버튼에만 스타일 적용
+    $(this).css({ backgroundColor: "#005b45", color: "white" });
+  });
   $(".swip_btn")
     .find("li")
     .eq(0)

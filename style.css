@@ -184,7 +184,6 @@ header .menu_aside a {
   color: white;
 }
 header .menu_aside h3 {
-  font-size: 4em;
   margin-bottom: 30px;
 }
 header .menu_X {
@@ -198,8 +197,8 @@ header .menu_X img {
 }
 header .menu_nav_inner {
   width: 70%;
-  padding: 100px;
-  margin-top: 50px;
+  padding: clamp(20px, 3vw, 40px);
+  margin-top: 200px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -342,7 +341,7 @@ video {
 }
 
 .swip_btn li:hover {
-  background-color: #2a7c31;
+  background-color: #005b45;
   color: white;
 }
 
@@ -400,6 +399,7 @@ video {
   background-color: rgb(43, 68, 36);
   border: 1px solid rgb(26, 48, 26);
 }
+
 .btn:hover {
   margin-bottom: 1px;
   box-shadow: 2px 2px 5px 0 rgb(92, 92, 92);
