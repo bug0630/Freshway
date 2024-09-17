@@ -171,6 +171,9 @@ header {
     top: 0;
     display: flex;
     background-color: #fff;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
     .fnb {
       margin-top: 150px;
       width: 100%;
@@ -180,6 +183,9 @@ header {
       justify-content: left;
       padding: $side-padding;
       overflow-y: auto;
+      @media (max-width: 768px) {
+        margin-top: 50px;
+      }
       &::-webkit-scrollbar {
         width: 10px;
         opacity: 0;
@@ -238,11 +244,13 @@ header {
   }
   .menu_aside {
     width: 100%;
-    max-width: 400px;
     height: 100%;
     background-color: #075d46;
     display: flex;
     align-items: center;
+    @media (max-width: 768px) {
+      height: 300px;
+    }
   }
   .menu_aside > div {
     padding: 40px;

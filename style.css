@@ -180,6 +180,11 @@ header .menu_nav {
   display: flex;
   background-color: #fff;
 }
+@media (max-width: 768px) {
+  header .menu_nav {
+    flex-direction: column;
+  }
+}
 header .menu_nav .fnb {
   margin-top: 150px;
   width: 100%;
@@ -189,6 +194,11 @@ header .menu_nav .fnb {
   justify-content: left;
   padding: clamp(20px, 3vw, 40px);
   overflow-y: auto;
+}
+@media (max-width: 768px) {
+  header .menu_nav .fnb {
+    margin-top: 50px;
+  }
 }
 header .menu_nav .fnb::-webkit-scrollbar {
   width: 10px;
@@ -245,11 +255,15 @@ header .menu_nav .fnb .lnb li {
 }
 header .menu_aside {
   width: 100%;
-  max-width: 400px;
   height: 100%;
   background-color: #075d46;
   display: flex;
   align-items: center;
+}
+@media (max-width: 768px) {
+  header .menu_aside {
+    height: 300px;
+  }
 }
 header .menu_aside > div {
   padding: 40px;
