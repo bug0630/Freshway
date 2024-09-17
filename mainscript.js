@@ -1,9 +1,12 @@
 jQuery(document).ready(function () {
   $(".hamburger").click(function () {
     $(".menu_nav").css({ height: "100vh" });
+    document.body.classList.add("no-scroll"); // 토글 대신 addClass 사용
   });
+
   $(".menu_X").click(function () {
     $(".menu_nav").css({ height: "0%" });
+    document.body.classList.remove("no-scroll"); // removeClass 사용
   });
 
   let isDown = false;
@@ -129,4 +132,7 @@ jQuery(document).ready(function () {
         });
       }
     });
+  $(".top_btn").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, "smooth");
+  });
 });

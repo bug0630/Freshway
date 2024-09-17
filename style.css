@@ -14,6 +14,10 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
@@ -32,7 +36,7 @@ a {
 
 h2 {
   color: #ff9700;
-  font-size: 1vw;
+  font-size: clamp(12px, 1vw, 16px);
 }
 
 h3 {
@@ -175,10 +179,73 @@ header .menu_nav {
   top: 0;
   display: flex;
   background-color: #fff;
-  color: black;
+}
+header .menu_nav .fnb {
+  margin-top: 150px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: left;
+  padding: clamp(20px, 3vw, 40px);
+  overflow-y: auto;
+}
+header .menu_nav .fnb::-webkit-scrollbar {
+  width: 10px;
+  opacity: 0;
+}
+header .menu_nav .fnb:hover::-webkit-scrollbar {
+  opacity: 1;
+}
+header .menu_nav .fnb:hover::-webkit-scrollbar-thumb {
+  background: rgb(238, 238, 238);
+  border-radius: 12px;
+}
+header .menu_nav .fnb:hover::-webkit-scrollbar-track {
+  background: transparent;
+}
+@media (min-width: 1281px) {
+  header .menu_nav .fnb {
+    display: none;
+  }
+}
+header .menu_nav .fnb li {
+  width: 100%;
+  cursor: pointer;
+}
+header .menu_nav .fnb li h5 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .menu_nav .fnb .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  transform: rotate(90deg);
+}
+header .menu_nav .fnb .lnb {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.9em;
+  font-weight: 400;
+  overflow: hidden;
+  height: 0;
+  gap: 5px;
+}
+header .menu_nav .fnb .lnb a {
+  color: rgb(97, 97, 97);
+  width: 100%;
+}
+header .menu_nav .fnb .lnb a:hover {
+  color: #005b45;
+}
+header .menu_nav .fnb .lnb li {
+  display: flex;
+  padding: 10px 0;
 }
 header .menu_aside {
-  width: 30%;
+  width: 100%;
+  max-width: 400px;
   height: 100%;
   background-color: #075d46;
   display: flex;
@@ -210,6 +277,11 @@ header .menu_nav_inner {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);
+}
+@media screen and (max-width: 1280px) {
+  header .menu_nav_inner {
+    display: none;
+  }
 }
 header .menu_nav_inner > div {
   width: 150px;
@@ -244,54 +316,6 @@ header .menu_nav_inner div ul li {
 }
 header .menu_nav_inner div ul li > a {
   color: rgb(179, 179, 179);
-}
-
-.cs {
-  border: 1px solid rgb(206, 206, 206);
-  border-radius: 100%;
-  width: clamp(60px, 10vw, 75px);
-  aspect-ratio: 1/1;
-  text-align: center;
-  font-size: clamp(12px, 2vw, 14px);
-  position: fixed;
-  bottom: 250px;
-  right: 30px;
-  background-color: white;
-  line-height: 20px;
-}
-
-.CJ_talk {
-  border-radius: 100%;
-  width: clamp(60px, 10vw, 75px);
-  aspect-ratio: 1/1;
-  text-align: center;
-  position: fixed;
-  bottom: 150px;
-  right: 30px;
-  background-color: rgb(250, 163, 49);
-  font-size: 0.8em;
-  line-height: 20px;
-}
-
-.CJ_talk img {
-  width: 30px;
-}
-
-.top_btn {
-  border: 0.1px solid rgb(206, 206, 206);
-  border-radius: 100%;
-  width: clamp(60px, 10vw, 75px);
-  aspect-ratio: 1/1;
-  font-size: clamp(12px, 2vw, 14px);
-  text-align: center;
-  position: fixed;
-  bottom: 50px;
-  right: 30px;
-  color: white;
-  line-height: 20px;
-  cursor: pointer;
-  background-color: black;
-  opacity: 40%;
 }
 
 video {
@@ -360,10 +384,6 @@ video {
   }
 }
 
-.slide a {
-  color: white;
-}
-
 .slide_left {
   flex-basis: 7;
 }
@@ -395,6 +415,7 @@ video {
   border-radius: 5px;
   text-align: center;
   background-color: rgb(43, 68, 36);
+  color: white;
   border: 1px solid rgb(26, 48, 26);
 }
 
@@ -766,6 +787,54 @@ footer {
 }
 footer h5 {
   font-weight: 600;
+}
+footer aside {
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 5;
+}
+
+.cs {
+  border-radius: 100%;
+  width: clamp(60px, 10vw, 75px);
+  aspect-ratio: 1/1;
+  text-align: center;
+  font-size: clamp(12px, 2vw, 14px);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 10px 0 rgb(117, 117, 117);
+}
+
+.CJ_talk {
+  border-radius: 100%;
+  width: clamp(60px, 10vw, 75px);
+  aspect-ratio: 1/1;
+  text-align: center;
+  background-color: rgb(250, 163, 49);
+  box-shadow: 2px 2px 10px 0 rgb(117, 117, 117);
+}
+.CJ_talk img {
+  width: 50%;
+}
+
+.top_btn {
+  border-radius: 100%;
+  width: clamp(60px, 10vw, 75px);
+  aspect-ratio: 1/1;
+  font-size: clamp(12px, 2vw, 14px);
+  text-align: center;
+  color: white;
+  line-height: 20px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 10px 0 rgb(117, 117, 117);
+}
+.top_btn:hover {
+  background-color: black;
+  color: white;
 }
 
 .footer-top {
