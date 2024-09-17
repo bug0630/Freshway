@@ -340,8 +340,19 @@ header .menu_nav_inner div ul li > a {
   color: rgb(179, 179, 179);
 }
 
+.video {
+  display: flex;
+  padding: 0;
+  overflow: hidden;
+}
+
 video {
   width: 100%;
+}
+@media (max-width: 768px) {
+  video {
+    width: 768px;
+  }
 }
 
 .business {
