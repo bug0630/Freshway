@@ -190,6 +190,7 @@ header .menu_nav .fnb {
   width: 100%;
   display: flex;
   gap: 20px;
+  font-weight: 600;
   flex-direction: column;
   justify-content: left;
   padding: clamp(20px, 3vw, 40px);
@@ -228,7 +229,7 @@ header .menu_nav .fnb li h5 {
   align-items: center;
   justify-content: space-between;
 }
-header .menu_nav .fnb .material-symbols-outlined {
+header .menu_nav .fnb li .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
   transform: rotate(90deg);
 }
@@ -277,9 +278,15 @@ header .menu_aside h3 {
 }
 header .menu_X {
   position: absolute;
-  top: 35px;
-  right: 45px;
+  top: 3%;
+  right: 5%;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  header .menu_X {
+    top: 2%;
+    color: white;
+  }
 }
 header .menu_X img {
   width: 25px;
