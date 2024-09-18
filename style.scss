@@ -330,9 +330,12 @@ header {
   overflow: hidden;
 }
 video {
-  width: 100%;
   @media (max-width: 768px) {
-    width: 768px;
+    height: 100vh;
+    max-height: 420px;
+  }
+  @media (min-width: 769px) {
+    width: 100%;
   }
 }
 .business {
@@ -466,11 +469,14 @@ video {
 }
 
 .ESG h3 {
+  position: relative;
   transition-duration: 1s;
+  @media (max-width: 768px) {
+    bottom: -30%;
+  }
 }
 .ESG h4 {
   position: relative;
-  font-size: 0.8em;
   transition-duration: 1s;
   @media (min-width: 769px) {
     left: 100%;
@@ -482,9 +488,8 @@ video {
 .ESG ul li:hover {
   box-shadow: inset 1280px 1280px 1280px 1280px rgba(20, 20, 20, 0.7);
   h3 {
-    font-size: 0.6em;
     @media (max-width: 768px) {
-      display: none;
+      bottom: -5%;
     }
   }
   h4 {
@@ -492,7 +497,6 @@ video {
       left: 25%;
     }
     @media (max-width: 768px) {
-      display: block;
       top: 10%;
     }
   }

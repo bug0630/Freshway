@@ -346,12 +346,15 @@ header .menu_nav_inner div ul li > a {
   overflow: hidden;
 }
 
-video {
-  width: 100%;
-}
 @media (max-width: 768px) {
   video {
-    width: 768px;
+    height: 100vh;
+    max-height: 420px;
+  }
+}
+@media (min-width: 769px) {
+  video {
+    width: 100%;
   }
 }
 
@@ -489,12 +492,17 @@ video {
 }
 
 .ESG h3 {
+  position: relative;
   transition-duration: 1s;
+}
+@media (max-width: 768px) {
+  .ESG h3 {
+    bottom: -30%;
+  }
 }
 
 .ESG h4 {
   position: relative;
-  font-size: 0.8em;
   transition-duration: 1s;
 }
 @media (min-width: 769px) {
@@ -511,12 +519,9 @@ video {
 .ESG ul li:hover {
   box-shadow: inset 1280px 1280px 1280px 1280px rgba(20, 20, 20, 0.7);
 }
-.ESG ul li:hover h3 {
-  font-size: 0.6em;
-}
 @media (max-width: 768px) {
   .ESG ul li:hover h3 {
-    display: none;
+    bottom: -5%;
   }
 }
 @media (min-width: 769px) {
@@ -526,7 +531,6 @@ video {
 }
 @media (max-width: 768px) {
   .ESG ul li:hover h4 {
-    display: block;
     top: 10%;
   }
 }
