@@ -279,13 +279,12 @@ header .menu_aside h3 {
 }
 header .menu_X {
   position: absolute;
-  top: clamp(20px, 3vw, 30px);
-  right: clamp(40px, 4.5vw, 60px);
+  top: clamp(20px, 3vw, 40px);
+  right: clamp(40px, 4vw, 60px);
   cursor: pointer;
 }
 @media (max-width: 768px) {
   header .menu_X {
-    top: 2%;
     color: white;
   }
 }
