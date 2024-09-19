@@ -694,9 +694,22 @@ header .menu_nav_inner div ul li > a {
   border-top: 1px solid rgb(216, 216, 216);
   padding: 20px 0;
 }
+.post li h4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+}
 .post li p {
   margin-top: 20px;
   color: gray;
+  font-size: clamp(12px, 1vw, 16px);
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
 }
 
 .CS_center {
