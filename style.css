@@ -37,6 +37,7 @@ body.no-scroll {
 h2 {
   color: #ff9700;
   font-size: clamp(12px, 1vw, 16px);
+  padding: clamp(12px, 1vw, 16px) 0;
 }
 
 h3 {
@@ -373,6 +374,7 @@ header .menu_nav_inner div ul li > a {
   display: flex;
   padding: 10px 0;
   position: relative;
+  font-size: clamp(12px, 1.5vw, 16px);
 }
 .swip_btn .left {
   left: 0;
@@ -386,7 +388,6 @@ header .menu_nav_inner div ul li > a {
   position: sticky;
   flex-shrink: 0;
   padding: 0;
-  height: 40px;
   width: 10px;
   border: none;
 }
@@ -679,7 +680,7 @@ header .menu_nav_inner div ul li > a {
 .post {
   display: flex;
   flex-flow: column;
-  margin-top: 50px;
+  margin-top: clamp(20px, 4vw, 30px);
 }
 
 .number {
@@ -944,7 +945,7 @@ footer aside {
 }
 .fnb .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-  transform: rotate(90deg);
+  font-size: 1em;
 }
 .fnb .lnb {
   display: flex;

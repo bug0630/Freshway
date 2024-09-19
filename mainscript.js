@@ -118,7 +118,7 @@ jQuery(document).ready(function () {
 
         // 화살표 270도 회전
         $arrow.css({
-          transform: "rotate(270deg)",
+          transform: "rotate(45deg)",
           transition: "transform 0.3s",
         });
       } else {
