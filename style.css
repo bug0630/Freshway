@@ -562,7 +562,6 @@ header .menu_nav_inner div ul li > a {
 .IR {
   background-color: #075d46;
   width: 100%;
-  padding: 100px 0;
 }
 
 .IR_box {
@@ -673,14 +672,8 @@ header .menu_nav_inner div ul li > a {
 }
 
 .PRESS {
-  width: 1280px;
-  height: 800px;
-  padding: 100px 0;
+  max-width: 1280px;
   margin: 0 auto;
-}
-
-.PRESS > h3 {
-  font-size: 4em;
 }
 
 .post {
@@ -689,21 +682,21 @@ header .menu_nav_inner div ul li > a {
   margin-top: 50px;
 }
 
+.number {
+  font-weight: 500;
+  font-size: clamp(16px, 2.8vw, 24px);
+  color: #005b45;
+}
+
 .post li {
-  padding: 30px 0;
+  display: flex;
+  gap: 10px;
   border-top: 1px solid rgb(216, 216, 216);
-  line-height: 30px;
+  padding: 20px 0;
 }
-
-.post li > div {
-  float: left;
-  margin-right: 20px;
-  color: #075d46;
-  font-size: 1.2em;
-}
-
-.post li > p {
-  margin-left: 60px;
+.post li p {
+  margin-top: 20px;
+  color: gray;
 }
 
 .CS_center {

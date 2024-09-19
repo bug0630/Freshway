@@ -551,7 +551,6 @@ video {
 .IR {
   background-color: #075d46;
   width: 100%;
-  padding: 100px 0;
 }
 .IR_box {
   width: 1280px;
@@ -649,35 +648,29 @@ video {
   display: block;
 }
 .PRESS {
-  width: 1280px;
-  height: 800px;
-  padding: 100px 0;
+  max-width: 1280px;
   margin: 0 auto;
-}
-
-.PRESS > h3 {
-  font-size: 4em;
 }
 .post {
   display: flex;
   flex-flow: column;
   margin-top: 50px;
 }
+.number {
+  font-weight: 500;
+  font-size: clamp(16px, 2.8vw, 24px);
+  color: $main-color;
+}
 .post li {
-  padding: 30px 0;
+  display: flex;
+  gap: 10px;
   border-top: 1px solid rgb(216, 216, 216);
-  line-height: 30px;
+  padding: 20px 0;
+  p {
+    margin-top: 20px;
+    color: gray;
+  }
 }
-.post li > div {
-  float: left;
-  margin-right: 20px;
-  color: #075d46;
-  font-size: 1.2em;
-}
-.post li > p {
-  margin-left: 60px;
-}
-
 .CS_center {
   background-color: rgb(226, 226, 226);
   padding: 0;
