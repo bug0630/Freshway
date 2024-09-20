@@ -33,14 +33,14 @@ h2 {
   padding: clamp(12px, 1vw, 16px) 0;
 }
 h3 {
-  font-weight: 700;
-  font-size: clamp(20px, 3vw, 36px);
+  font-weight: 600;
+  font-size: clamp(24px, 3vw, 36px);
 }
 h4 {
   font-weight: 500;
-  font-size: clamp(16px, 2.8vw, 24px);
+  font-size: clamp(16px, 2vw, 24px);
 }
-$header-font: clamp(20px, 1.2vw, 28px);
+$header-font: clamp(20px, 1.4vw, 24px);
 $cj-yellow: #ff9700;
 $main-color: #005b45;
 $side-padding: clamp(20px, 3vw, 40px);
@@ -97,7 +97,7 @@ header {
           color: $main-color;
         }
         &:hover .lnb {
-          height: 300px;
+          height: 310px;
           border-top: 1px solid rgb(233, 233, 233);
         }
         &:hover .lnb li {
@@ -551,10 +551,11 @@ video {
 
 .IR {
   background-color: #075d46;
-  width: 100%;
+  padding: 0;
 }
 .IR_box {
-  width: 1280px;
+  max-width: 1280px;
+  padding: $side-padding;
   margin: 0 auto;
 }
 
@@ -659,7 +660,7 @@ video {
 }
 .number {
   font-weight: 500;
-  font-size: clamp(16px, 2.8vw, 24px);
+  font-size: clamp(16px, 2vw, 24px);
   color: $main-color;
 }
 .post li {
