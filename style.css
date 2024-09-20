@@ -56,7 +56,7 @@ section {
 
 header {
   width: 100%;
-  height: clamp(60px, 10vw, 100px);
+  height: clamp(60px, 5vw, 100px);
   position: fixed;
   top: 0;
   box-shadow: 0 0 2px 0 gray;
@@ -100,7 +100,7 @@ header nav .gnb {
 header nav .gnb li {
   width: 100%;
   height: 100%;
-  font-size: clamp(20px, 1.4vw, 24px);
+  font-size: clamp(16px, 1.2vw, 24px);
   font-weight: 500;
 }
 header nav .gnb li:hover {
