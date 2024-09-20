@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
@@ -12,6 +13,18 @@ a {
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+  user-select: none; /* 모든 요소의 선택 방지 */
+  -webkit-user-select: none; /* 크롬, 사파리 */
+  -moz-user-select: none; /* 파이어폭스 */
+  -ms-user-select: none; /* 인터넷 익스플로러, 엣지 */
+}
+
+img {
+  -webkit-user-drag: none; /* 크롬, 사파리 */
+  -moz-user-drag: none; /* 파이어폭스 */
+  -ms-user-drag: none; /* 인터넷 익스플로러, 엣지 */
+  user-drag: none; /* 표준 */
+  pointer-events: none; /* 클릭 및 드래그 불가 */
 }
 
 body.no-scroll {
@@ -482,7 +495,6 @@ header .menu_nav_inner div ul li > a {
   display: flex;
   align-items: center;
   overflow: hidden;
-  transition-duration: 2s;
 }
 @media (max-width: 768px) {
   .ESG ul li {
@@ -493,7 +505,6 @@ header .menu_nav_inner div ul li > a {
 
 .ESG h3 {
   position: relative;
-  transition-duration: 1s;
 }
 @media (max-width: 768px) {
   .ESG h3 {
@@ -503,7 +514,6 @@ header .menu_nav_inner div ul li > a {
 
 .ESG h4 {
   position: relative;
-  transition-duration: 1s;
 }
 @media (min-width: 769px) {
   .ESG h4 {
@@ -517,12 +527,19 @@ header .menu_nav_inner div ul li > a {
 }
 
 .ESG ul li:hover {
+  transition-duration: 2s;
   box-shadow: inset 1280px 1280px 1280px 1280px rgba(20, 20, 20, 0.7);
+}
+.ESG ul li:hover h3 {
+  transition-duration: 1s;
 }
 @media (max-width: 768px) {
   .ESG ul li:hover h3 {
     bottom: -5%;
   }
+}
+.ESG ul li:hover h4 {
+  transition-duration: 1s;
 }
 @media (min-width: 769px) {
   .ESG ul li:hover h4 {
