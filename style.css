@@ -580,6 +580,7 @@ header .menu_nav_inner div ul li > a {
 .IR {
   background-color: #075d46;
   padding: 0;
+  font-size: clamp(12px, 2vw, 16px);
 }
 
 .IR_box {
@@ -589,78 +590,88 @@ header .menu_nav_inner div ul li > a {
 }
 
 .IR_box h3 {
-  font-size: 4em;
   color: white;
 }
 
 .IR_content {
   display: flex;
   justify-content: space-between;
+  margin-top: clamp(20px, 2vw, 30px);
+  gap: clamp(20px, 5vw, 50px);
+}
+@media screen and (max-width: 678px) {
+  .IR_content {
+    flex-direction: column;
+  }
 }
 
 .IR_left {
   background-color: white;
-  width: 800px;
-  height: 320px;
-  padding: 50px;
-  box-shadow: 0 1px 10px 0 rgb(44, 44, 44);
-}
-
-.IR_left h4 {
-  font-size: 2em;
-}
-
-.IR_left span {
-  color: green;
-  font-size: 1.4rem;
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: clamp(20px, 3vw, 40px);
 }
 
 .today {
   display: flex;
-  align-items: center;
+  gap: 20px;
 }
-
-.price {
-  font-size: 4em;
-  margin-right: 20px;
+@media screen and (max-width: 678px) {
+  .today {
+    flex-direction: column;
+  }
+}
+.today .price {
+  font-size: clamp(24px, 4vw, 48px);
+}
+.today .time {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .trade {
   display: flex;
-  width: 900px;
   margin-top: 30px;
   flex-wrap: wrap;
 }
 
 .trade li {
-  width: 300px;
+  width: 30%;
   display: flex;
   flex-direction: column;
+  gap: 10px;
   margin-top: 20px;
 }
 
-.IR_right ul {
+.IR_right {
+  width: 50%;
+  display: flex;
   flex-flow: column;
   align-items: center;
+  gap: 10px;
+}
+@media screen and (max-width: 678px) {
+  .IR_right {
+    width: 100%;
+    flex-direction: row;
+  }
 }
 
-.IR_right ul li {
+.IR_right li {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: white;
-  box-shadow: 0 1px 20px 0 black;
-  width: 350px;
-  height: 120px;
-  margin-bottom: 30px;
-  padding: 10px;
+  padding: clamp(20px, 3vw, 40px);
+  border-radius: 10px;
 }
 
-.IR_right ul li span {
-  padding: 0 50px 0 10px;
-}
-
-.IR_right ul li:nth-of-type(1) i {
+.IR_right li:nth-of-type(1) i {
   width: 40px;
   height: 40px;
   background-image: url(img/icons.png);
@@ -670,7 +681,7 @@ header .menu_nav_inner div ul li > a {
   display: block;
 }
 
-.IR_right ul li:nth-of-type(2) i {
+.IR_right li:nth-of-type(2) i {
   width: 40px;
   height: 40px;
   background-image: url(img/icons.png);
@@ -680,7 +691,7 @@ header .menu_nav_inner div ul li > a {
   display: block;
 }
 
-.IR_right ul li:nth-of-type(3) i {
+.IR_right li:nth-of-type(3) i {
   width: 40px;
   height: 40px;
   background-image: url(img/icons.png);
