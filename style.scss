@@ -2,6 +2,7 @@ body {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-size: clamp(12px, 1vw, 16px);
 }
 a {
   all: unset;
@@ -19,10 +20,14 @@ img {
   -webkit-user-drag: none; /* 크롬, 사파리 */
   -moz-user-drag: none; /* 파이어폭스 */
   -ms-user-drag: none; /* 인터넷 익스플로러, 엣지 */
-  user-drag: none; /* 표준 */
+  // user-drag: none; /* 표준 */
 
   pointer-events: none; /* 클릭 및 드래그 불가 */
 }
+$header-font: clamp(16px, 1.2vw, 24px);
+$cj-yellow: #ff9700;
+$main-color: #005b45;
+$side-padding: clamp(20px, 3vw, 40px);
 body.no-scroll {
   overflow: hidden;
 }
@@ -52,13 +57,11 @@ h4 {
   font-weight: 500;
   font-size: clamp(16px, 2vw, 24px);
 }
-$header-font: clamp(16px, 1.2vw, 24px);
-$cj-yellow: #ff9700;
-$main-color: #005b45;
-$side-padding: clamp(20px, 3vw, 40px);
 section {
   padding: $side-padding;
 }
+
+// ---------
 header {
   width: 100%;
   height: clamp(60px, 5vw, 100px);
@@ -84,9 +87,7 @@ header {
       width: 150px;
       height: 100%;
       z-index: 100;
-      a {
-        height: 100%;
-      }
+      a,
       img {
         height: 100%;
       }
@@ -473,43 +474,59 @@ video {
   display: flex;
   align-items: center;
   overflow: hidden;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     flex-direction: column;
     justify-content: center;
   }
 }
-
-.ESG h3 {
+.ESG ul {
   position: relative;
+}
+.ESG ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @media (max-width: 768px) {
-    bottom: -30%;
+    justify-content: end;
+  }
+  @media (max-width: 480px) {
+    justify-content: center;
+  }
+}
+.ESG ul h3 {
+  @media (max-width: 480px) {
+    position: relative;
+    top: 20%;
+  }
+  @media (min-width: 481px) {
+    position: absolute;
+    left: 7%;
   }
 }
 .ESG h4 {
   position: relative;
-  @media (min-width: 769px) {
+  @media (min-width: 481px) {
     left: 100%;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 481px) {
     top: 100%;
   }
 }
 .ESG ul li:hover {
-  transition-duration: 2s;
   box-shadow: inset 1280px 1280px 1280px 1280px rgba(20, 20, 20, 0.7);
   h3 {
-    transition-duration: 1s;
-    @media (max-width: 768px) {
-      bottom: -5%;
+    @media (max-width: 480px) {
+      transition-duration: 1s;
+      top: 10%;
     }
   }
   h4 {
     transition-duration: 1s;
-    @media (min-width: 769px) {
-      left: 25%;
+    @media (min-width: 481px) {
+      left: 0;
     }
-    @media (max-width: 768px) {
-      top: 10%;
+    @media (max-width: 480px) {
+      top: 30%;
     }
   }
 }
@@ -580,7 +597,7 @@ video {
   justify-content: space-between;
   margin-top: clamp(20px, 2vw, 30px);
   gap: clamp(20px, 5vw, 50px);
-  @media screen and (max-width: 678px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 }
@@ -596,7 +613,7 @@ video {
 .today {
   display: flex;
   gap: 20px;
-  @media screen and (max-width: 678px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
   .price {
@@ -619,15 +636,17 @@ video {
   flex-direction: column;
   gap: 10px;
   margin-top: 20px;
+  span {
+    color: gray;
+  }
 }
-
 .IR_right {
   width: 50%;
   display: flex;
   flex-flow: column;
   align-items: center;
   gap: 10px;
-  @media screen and (max-width: 678px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
     flex-direction: row;
   }
@@ -727,28 +746,29 @@ video {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  @media screen and (max-width: 678px) {
+  font-size: clamp(12px, 3vw, 24px);
+  @media screen and (max-width: 480px) {
+    font-size: clamp(16px, 2vw, 24px);
     flex-direction: column;
   }
   i {
     margin-bottom: 20px;
-    margin: 20px auto;
+    margin: 0 auto;
     width: 60px;
     height: 60px;
     display: block;
   }
   li {
     width: clamp(200px, 28vw, 360px);
-    padding: 10px;
+    padding: $side-padding;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 1px 1px 5px 0 rgb(141, 141, 141);
     text-align: center;
     color: #075d46;
-    font-size: 1.2em;
     position: relative;
     background-color: rgb(240, 240, 240);
-    @media screen and (max-width: 678px) {
+    @media screen and (max-width: 480px) {
       width: 100%;
     }
     &:hover div {
