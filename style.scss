@@ -659,10 +659,15 @@ video {
   background-color: white;
   padding: $side-padding;
   border-radius: 10px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+  i {
+    width: 40px;
+    height: 40px;
+  }
 }
 .IR_right li:nth-of-type(1) i {
-  width: 40px;
-  height: 40px;
   background-image: url(img/icons.png);
   background-repeat: no-repeat;
   background-size: 300px auto;
@@ -670,8 +675,6 @@ video {
   display: block;
 }
 .IR_right li:nth-of-type(2) i {
-  width: 40px;
-  height: 40px;
   background-image: url(img/icons.png);
   background-repeat: no-repeat;
   background-size: 300px auto;
@@ -679,8 +682,6 @@ video {
   display: block;
 }
 .IR_right li:nth-of-type(3) i {
-  width: 40px;
-  height: 40px;
   background-image: url(img/icons.png);
   background-repeat: no-repeat;
   background-size: 300px auto;

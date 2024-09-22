@@ -692,10 +692,17 @@ header .menu_nav_inner div ul li > a {
   padding: clamp(20px, 3vw, 40px);
   border-radius: 10px;
 }
-
-.IR_right li:nth-of-type(1) i {
+@media screen and (max-width: 768px) {
+  .IR_right li {
+    flex-direction: column;
+  }
+}
+.IR_right li i {
   width: 40px;
   height: 40px;
+}
+
+.IR_right li:nth-of-type(1) i {
   background-image: url(img/icons.png);
   background-repeat: no-repeat;
   background-size: 300px auto;
@@ -704,8 +711,6 @@ header .menu_nav_inner div ul li > a {
 }
 
 .IR_right li:nth-of-type(2) i {
-  width: 40px;
-  height: 40px;
   background-image: url(img/icons.png);
   background-repeat: no-repeat;
   background-size: 300px auto;
@@ -714,8 +719,6 @@ header .menu_nav_inner div ul li > a {
 }
 
 .IR_right li:nth-of-type(3) i {
-  width: 40px;
-  height: 40px;
   background-image: url(img/icons.png);
   background-repeat: no-repeat;
   background-size: 300px auto;
