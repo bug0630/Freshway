@@ -4,10 +4,10 @@ body {
   font-style: normal;
   font-size: clamp(12px, 1vw, 16px);
 }
-a {
-  all: unset;
-  cursor: pointer;
-}
+$header-font: clamp(16px, 1.2vw, 24px);
+$cj-yellow: #ff9700;
+$main-color: #005b45;
+$side-padding: clamp(20px, 3vw, 40px);
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
@@ -20,16 +20,19 @@ img {
   -webkit-user-drag: none; /* 크롬, 사파리 */
   -moz-user-drag: none; /* 파이어폭스 */
   -ms-user-drag: none; /* 인터넷 익스플로러, 엣지 */
-  // user-drag: none; /* 표준 */
 
   pointer-events: none; /* 클릭 및 드래그 불가 */
 }
-$header-font: clamp(16px, 1.2vw, 24px);
-$cj-yellow: #ff9700;
-$main-color: #005b45;
-$side-padding: clamp(20px, 3vw, 40px);
+
+a {
+  all: unset;
+  cursor: pointer;
+}
 body.no-scroll {
   overflow: hidden;
+}
+.green {
+  color: $main-color;
 }
 .flex-center {
   display: flex;
@@ -123,6 +126,10 @@ header {
           display: flex;
           align-items: center;
           justify-content: center;
+          &:hover {
+            font-weight: bold;
+            color: $main-color;
+          }
         }
       }
       .lnb {
@@ -146,9 +153,6 @@ header {
         }
         .depth li {
           font-size: 16px;
-          &:hover {
-            font-weight: bold;
-          }
         }
       }
       @media (max-width: 1280px) {
@@ -185,8 +189,9 @@ header {
     top: 0;
     display: flex;
     background-color: #fff;
-    @media (max-width: 768px) {
-      flex-direction: column;
+    flex-direction: column;
+    @media (min-width: 1281px) {
+      flex-direction: row;
     }
     .fnb {
       margin-top: 150px;
@@ -217,7 +222,7 @@ header {
           background: transparent;
         }
       }
-      @media (min-width: 1281px) {
+      @media (min-width: 769px) {
         display: none;
       }
       li {
@@ -247,9 +252,6 @@ header {
         a {
           color: rgb(97, 97, 97);
           width: 100%;
-          &:hover {
-            color: $main-color;
-          }
         }
         li {
           display: flex;
@@ -259,15 +261,10 @@ header {
     }
   }
   .menu_aside {
-    width: 100%;
-    max-width: 768px;
-    height: 100%;
     background-color: #075d46;
     display: flex;
     align-items: center;
-    @media (max-width: 768px) {
-      height: 300px;
-    }
+    min-width: 30%;
   }
   .menu_aside > div {
     padding: 40px;
@@ -284,7 +281,7 @@ header {
     top: clamp(20px, 3vw, 40px);
     right: clamp(40px, 4vw, 60px);
     cursor: pointer;
-    @media (max-width: 768px) {
+    @media screen and (max-width: 1280px) {
       color: white;
     }
   }
@@ -292,13 +289,12 @@ header {
     width: 25px;
   }
   .menu_nav_inner {
-    width: 70%;
+    width: 100%;
     padding: $side-padding;
-    margin-top: 200px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    @media screen and (max-width: 1280px) {
+    @media screen and (max-width: 768px) {
       display: none;
     }
   }

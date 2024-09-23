@@ -6,11 +6,6 @@ body {
   font-size: clamp(12px, 1vw, 16px);
 }
 
-a {
-  all: unset;
-  cursor: pointer;
-}
-
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
@@ -27,8 +22,17 @@ img {
   pointer-events: none; /* 클릭 및 드래그 불가 */
 }
 
+a {
+  all: unset;
+  cursor: pointer;
+}
+
 body.no-scroll {
   overflow: hidden;
+}
+
+.green {
+  color: #005b45;
 }
 
 .flex-center {
@@ -132,6 +136,10 @@ header nav .gnb li a {
   align-items: center;
   justify-content: center;
 }
+header nav .gnb li a:hover {
+  font-weight: bold;
+  color: #005b45;
+}
 header nav .gnb .lnb {
   position: absolute;
   width: 100%;
@@ -154,9 +162,6 @@ header nav .gnb .lnb .depth {
 }
 header nav .gnb .lnb .depth li {
   font-size: 16px;
-}
-header nav .gnb .lnb .depth li:hover {
-  font-weight: bold;
 }
 @media (max-width: 1280px) {
   header nav .gnb {
@@ -191,10 +196,11 @@ header .menu_nav {
   top: 0;
   display: flex;
   background-color: #fff;
+  flex-direction: column;
 }
-@media (max-width: 768px) {
+@media (min-width: 1281px) {
   header .menu_nav {
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 header .menu_nav .fnb {
@@ -227,7 +233,7 @@ header .menu_nav .fnb:hover::-webkit-scrollbar-thumb {
 header .menu_nav .fnb:hover::-webkit-scrollbar-track {
   background: transparent;
 }
-@media (min-width: 1281px) {
+@media (min-width: 769px) {
   header .menu_nav .fnb {
     display: none;
   }
@@ -259,25 +265,15 @@ header .menu_nav .fnb .lnb a {
   color: rgb(97, 97, 97);
   width: 100%;
 }
-header .menu_nav .fnb .lnb a:hover {
-  color: #005b45;
-}
 header .menu_nav .fnb .lnb li {
   display: flex;
   padding: 10px 0;
 }
 header .menu_aside {
-  width: 100%;
-  max-width: 768px;
-  height: 100%;
   background-color: #075d46;
   display: flex;
   align-items: center;
-}
-@media (max-width: 768px) {
-  header .menu_aside {
-    height: 300px;
-  }
+  min-width: 30%;
 }
 header .menu_aside > div {
   padding: 40px;
@@ -295,7 +291,7 @@ header .menu_X {
   right: clamp(40px, 4vw, 60px);
   cursor: pointer;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 1280px) {
   header .menu_X {
     color: white;
   }
@@ -304,14 +300,13 @@ header .menu_X img {
   width: 25px;
 }
 header .menu_nav_inner {
-  width: 70%;
+  width: 100%;
   padding: clamp(20px, 3vw, 40px);
-  margin-top: 200px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 768px) {
   header .menu_nav_inner {
     display: none;
   }
