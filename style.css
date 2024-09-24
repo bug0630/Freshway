@@ -31,8 +31,8 @@ body.no-scroll {
   overflow: hidden;
 }
 
-.green {
-  color: #005b45;
+.blue {
+  color: #006ecd;
 }
 
 .blue {
@@ -685,17 +685,28 @@ header .menu_nav_inner div ul li > a {
 
 .IR_right li {
   width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+}
+.IR_right li a {
   background-color: white;
   padding: clamp(20px, 3vw, 40px);
   border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.IR_right li a:hover span {
+  color: #ff9700;
+  transition-duration: 0.3s;
 }
 @media screen and (max-width: 768px) {
-  .IR_right li {
+  .IR_right li a {
     flex-direction: column;
+    gap: 5px;
   }
+}
+.IR_right li span {
+  color: #006ecd;
+  font-weight: 500;
 }
 .IR_right li i {
   width: 40px;
@@ -743,20 +754,24 @@ header .menu_nav_inner div ul li > a {
   color: #006ecd;
 }
 
-.post li {
+.post li a {
   display: flex;
   gap: 10px;
   border-top: 1px solid rgb(216, 216, 216);
   padding: 20px 0;
 }
-.post li h4 {
+.post li a:hover .number {
+  color: #ef141d;
+  transition-duration: 0.3s;
+}
+.post li a h4 {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   line-clamp: 2;
   -webkit-line-clamp: 2;
 }
-.post li p {
+.post li a p {
   margin-top: 20px;
   color: gray;
   font-size: clamp(12px, 1vw, 16px);
@@ -813,7 +828,7 @@ header .menu_nav_inner div ul li > a {
   text-align: center;
   color: #075d46;
   position: relative;
-  background-color: rgb(240, 240, 240);
+  background-color: white;
 }
 @media screen and (max-width: 480px) {
   .center li {
@@ -829,7 +844,7 @@ header .menu_nav_inner div ul li > a {
 .center li div {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(0, 0, 0);
   left: 100%;
   top: 0;
   position: absolute;
