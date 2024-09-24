@@ -291,8 +291,8 @@ header .menu_aside h3 {
 }
 header .menu_X {
   position: absolute;
-  top: clamp(20px, 3vw, 40px);
-  right: clamp(40px, 4vw, 60px);
+  top: clamp(20px, 2vw, 30px);
+  right: clamp(35px, 4vw, 60px);
   cursor: pointer;
 }
 @media screen and (max-width: 1280px) {

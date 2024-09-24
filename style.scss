@@ -21,7 +21,6 @@ img {
   -webkit-user-drag: none; /* 크롬, 사파리 */
   -moz-user-drag: none; /* 파이어폭스 */
   -ms-user-drag: none; /* 인터넷 익스플로러, 엣지 */
-
   pointer-events: none; /* 클릭 및 드래그 불가 */
 }
 
@@ -282,8 +281,8 @@ header {
   }
   .menu_X {
     position: absolute;
-    top: clamp(20px, 3vw, 40px);
-    right: clamp(40px, 4vw, 60px);
+    top: clamp(20px, 2vw, 30px);
+    right: clamp(35px, 4vw, 60px);
     cursor: pointer;
     @media screen and (max-width: 1280px) {
       color: white;
