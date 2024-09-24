@@ -3,7 +3,7 @@ body {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: clamp(12px, 1vw, 16px);
+  font-size: clamp(12px, 3vw, 16px);
 }
 
 * {
@@ -35,6 +35,10 @@ body.no-scroll {
   color: #005b45;
 }
 
+.blue {
+  color: #006ecd;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
@@ -52,7 +56,7 @@ body.no-scroll {
 }
 
 h2 {
-  color: #ff9700;
+  color: #ef141d;
   font-size: clamp(12px, 1vw, 16px);
   padding: clamp(12px, 1vw, 16px) 0;
 }
@@ -115,7 +119,7 @@ header nav .gnb {
 header nav .gnb li {
   width: 100%;
   height: 100%;
-  font-size: clamp(16px, 1.2vw, 24px);
+  font-size: clamp(20px, 1.2vw, 24px);
   font-weight: 500;
 }
 header nav .gnb li:hover {
@@ -415,7 +419,7 @@ header .menu_nav_inner div ul li > a {
   overflow: hidden;
   background-color: rgb(240, 240, 240);
   border-radius: 20px;
-  font-size: clamp(12px, 2vw, 16px);
+  font-size: clamp(12px, 1.5vw, 16px);
 }
 .slide li {
   display: none;
@@ -423,6 +427,7 @@ header .menu_nav_inner div ul li > a {
 @media (max-width: 768px) {
   .slide li {
     flex-direction: column;
+    font-size: clamp(14px, 1.5vw, 16px);
   }
 }
 
@@ -446,7 +451,6 @@ header .menu_nav_inner div ul li > a {
   gap: 20px;
   padding: clamp(20px, 3vw, 40px);
 }
-
 .slide_right h3 {
   color: #005b45;
   padding: 10px 0;
@@ -456,14 +460,15 @@ header .menu_nav_inner div ul li > a {
   padding: 10px;
   border-radius: 5px;
   text-align: center;
-  background-color: rgb(43, 68, 36);
-  color: white;
-  border: 1px solid rgb(26, 48, 26);
+  border: 1px solid gray;
 }
-
-.btn:hover {
-  margin-bottom: 1px;
-  box-shadow: 2px 2px 5px 0 rgb(92, 92, 92);
+.btn span {
+  font-weight: 500;
+  color: #006ecd;
+}
+.btn:hover span {
+  color: #ff9700;
+  transition-duration: 0.3s;
 }
 
 .ESG {
@@ -735,7 +740,7 @@ header .menu_nav_inner div ul li > a {
 .number {
   font-weight: 500;
   font-size: clamp(16px, 2vw, 24px);
-  color: #005b45;
+  color: #006ecd;
 }
 
 .post li {
@@ -784,7 +789,7 @@ header .menu_nav_inner div ul li > a {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  font-size: clamp(12px, 3vw, 24px);
+  font-size: clamp(16px, 2vw, 24px);
 }
 @media screen and (max-width: 480px) {
   .center {
@@ -825,11 +830,12 @@ header .menu_nav_inner div ul li > a {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  text-align: center;
-  line-height: 150px;
   left: 100%;
   top: 0;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .counseling li:nth-of-type(1) i {
