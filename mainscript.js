@@ -40,7 +40,10 @@ jQuery(document).ready(function () {
 
   // 첫 번째 슬라이드 표시 및 첫 번째 버튼에 활성화 스타일 적용
   $(".slide1").css({ display: "flex" });
-  $(".swip_btn li").eq(0).css({ backgroundColor: "#005b45", color: "white" });
+  $(".swip_btn li")
+    .eq(0)
+    .addClass("active")
+    .css({ backgroundColor: "#005b45", color: "white" });
 
   // 슬라이드 버튼 호버 시 스타일 적용
   $(".swip_btn li").hover(

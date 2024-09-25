@@ -52,7 +52,7 @@ body.no-scroll {
 }
 
 h2 {
-  color: #ef141d;
+  color: #ff9700;
   font-weight: bold;
   font-size: clamp(12px, 1vw, 16px);
   padding: clamp(12px, 1vw, 16px) 0;
@@ -91,7 +91,7 @@ header nav {
   color: white;
 }
 header nav:hover {
-  background-color: #ffffff;
+  background-color: white;
   color: black;
 }
 header nav h1 {
@@ -465,7 +465,7 @@ header .menu_nav_inner div ul li > a {
   color: #006ecd;
 }
 .btn:hover span {
-  color: #ff9700;
+  color: #ef141d;
   transition-duration: 0.3s;
 }
 
@@ -694,7 +694,7 @@ header .menu_nav_inner div ul li > a {
   align-items: center;
 }
 .IR_right li a:hover span {
-  color: #ff9700;
+  color: #ef141d;
   transition-duration: 0.3s;
 }
 @media screen and (max-width: 768px) {
@@ -760,7 +760,7 @@ header .menu_nav_inner div ul li > a {
   padding: 20px 0;
 }
 .post li a:hover .number {
-  color: #ff9700;
+  color: #ef141d;
   transition-duration: 0.3s;
 }
 .post li a h4 {
@@ -924,6 +924,7 @@ footer aside {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.3);
   box-shadow: 2px 2px 10px 0 rgb(117, 117, 117);
+  transition: 0.2s;
 }
 .aside_btn:hover {
   background-color: black;
