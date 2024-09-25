@@ -35,10 +35,6 @@ body.no-scroll {
   color: #006ecd;
 }
 
-.blue {
-  color: #006ecd;
-}
-
 .flex-center {
   display: flex;
   justify-content: center;
@@ -57,17 +53,18 @@ body.no-scroll {
 
 h2 {
   color: #ef141d;
+  font-weight: bold;
   font-size: clamp(12px, 1vw, 16px);
   padding: clamp(12px, 1vw, 16px) 0;
 }
 
 h3 {
-  font-weight: 600;
+  font-weight: 700;
   font-size: clamp(24px, 3vw, 36px);
 }
 
 h4 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: clamp(16px, 2vw, 24px);
 }
 
@@ -460,7 +457,8 @@ header .menu_nav_inner div ul li > a {
   padding: 10px;
   border-radius: 5px;
   text-align: center;
-  border: 1px solid gray;
+  border: 1px solid rgb(212, 212, 212);
+  background-color: white;
 }
 .btn span {
   font-weight: 500;
@@ -550,15 +548,16 @@ header .menu_nav_inner div ul li > a {
 
 .ESG ul li:hover {
   box-shadow: inset 1280px 1280px 1280px 1280px rgba(20, 20, 20, 0.7);
+  transition: 1s;
 }
 @media (max-width: 480px) {
   .ESG ul li:hover h3 {
-    transition-duration: 1s;
+    transition: 1s ease-in-out;
     top: 10%;
   }
 }
 .ESG ul li:hover h4 {
-  transition-duration: 1s;
+  transition: 1s ease-in-out;
 }
 @media (min-width: 481px) {
   .ESG ul li:hover h4 {
@@ -761,7 +760,7 @@ header .menu_nav_inner div ul li > a {
   padding: 20px 0;
 }
 .post li a:hover .number {
-  color: #ef141d;
+  color: #ff9700;
   transition-duration: 0.3s;
 }
 .post li a h4 {
@@ -921,6 +920,7 @@ footer aside {
   text-align: center;
   color: white;
   line-height: 20px;
+  border: 1px solid rgba(212, 212, 212, 0.3);
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.3);
   box-shadow: 2px 2px 10px 0 rgb(117, 117, 117);
@@ -936,6 +936,9 @@ footer aside {
 }
 .aside_btn:nth-of-type(3):hover {
   background-color: #ef141d;
+}
+.aside_btn:nth-of-type(4):hover {
+  color: #ff9700;
 }
 
 .footer-top {
