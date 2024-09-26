@@ -401,10 +401,10 @@ header .menu_nav_inner div ul li > a {
 
 .swip_btn li {
   text-align: center;
-  border: 1px solid rgb(202, 202, 202);
+  border: 1px solid rgb(212, 212, 212);
+  color: gray;
   border-radius: 5px;
   padding: 10px;
-  color: gray;
   flex-shrink: 0;
   margin-right: 10px;
   cursor: pointer;
@@ -920,7 +920,7 @@ footer aside {
   text-align: center;
   color: white;
   line-height: 20px;
-  border: 1px solid rgba(212, 212, 212, 0.3);
+  border: 2px solid rgba(240, 240, 240, 0.3);
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.3);
   box-shadow: 2px 2px 10px 0 rgb(117, 117, 117);
