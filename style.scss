@@ -384,9 +384,9 @@ video {
     margin-right: 10px;
     @extend .btn;
     position: relative;
-    left: -20px;
   }
   .left {
+    width: 10px;
     left: 0;
     background: linear-gradient(
       to right,
@@ -396,6 +396,7 @@ video {
     );
   }
   .right {
+    width: 30px;
     right: 0;
     background: linear-gradient(
       to left,
@@ -408,7 +409,6 @@ video {
     position: sticky;
     flex-shrink: 0;
     padding: 0;
-    width: 30px;
     border: none;
     z-index: 2;
   }

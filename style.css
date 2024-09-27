@@ -401,13 +401,14 @@ header .menu_nav_inner div ul li > a {
   flex-shrink: 0;
   margin-right: 10px;
   position: relative;
-  left: -20px;
 }
 .swip_btn .left {
+  width: 10px;
   left: 0;
   background: linear-gradient(to right, #ffffff 0%, #ffffff 10%, rgba(255, 255, 255, 0) 100%);
 }
 .swip_btn .right {
+  width: 30px;
   right: 0;
   background: linear-gradient(to left, #ffffff 0%, #ffffff 10%, rgba(255, 255, 255, 0) 100%);
 }
@@ -415,7 +416,6 @@ header .menu_nav_inner div ul li > a {
   position: sticky;
   flex-shrink: 0;
   padding: 0;
-  width: 30px;
   border: none;
   z-index: 2;
 }
