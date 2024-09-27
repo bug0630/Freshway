@@ -370,9 +370,7 @@ video {
   width: 100%;
   max-width: 1280px;
 }
-.swip {
-  width: 100%;
-}
+
 .swip_btn {
   width: 100%;
   overflow: hidden;
@@ -380,12 +378,20 @@ video {
   padding: 10px 0;
   position: relative;
   font-size: clamp(12px, 1.5vw, 16px);
+  li {
+    color: gray;
+    flex-shrink: 0;
+    margin-right: 10px;
+    @extend .btn;
+    position: relative;
+    left: -20px;
+  }
   .left {
     left: 0;
     background: linear-gradient(
       to right,
       #ffffff 0%,
-      #ffffff 20%,
+      #ffffff 10%,
       rgba(255, 255, 255, 0) 100%
     );
   }
@@ -394,7 +400,7 @@ video {
     background: linear-gradient(
       to left,
       #ffffff 0%,
-      #ffffff 20%,
+      #ffffff 10%,
       rgba(255, 255, 255, 0) 100%
     );
   }
@@ -402,16 +408,10 @@ video {
     position: sticky;
     flex-shrink: 0;
     padding: 0;
-    width: 10px;
+    width: 30px;
     border: none;
+    z-index: 2;
   }
-}
-.swip_btn li {
-  text-align: center;
-  color: gray;
-  flex-shrink: 0;
-  margin-right: 10px;
-  @extend .btn;
 }
 
 .slide {

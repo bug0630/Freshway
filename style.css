@@ -388,10 +388,6 @@ header .menu_nav_inner div ul li > a {
   max-width: 1280px;
 }
 
-.swip {
-  width: 100%;
-}
-
 .swip_btn {
   width: 100%;
   overflow: hidden;
@@ -400,27 +396,28 @@ header .menu_nav_inner div ul li > a {
   position: relative;
   font-size: clamp(12px, 1.5vw, 16px);
 }
+.swip_btn li {
+  color: gray;
+  flex-shrink: 0;
+  margin-right: 10px;
+  position: relative;
+  left: -20px;
+}
 .swip_btn .left {
   left: 0;
-  background: linear-gradient(to right, #ffffff 0%, #ffffff 20%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right, #ffffff 0%, #ffffff 10%, rgba(255, 255, 255, 0) 100%);
 }
 .swip_btn .right {
   right: 0;
-  background: linear-gradient(to left, #ffffff 0%, #ffffff 20%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to left, #ffffff 0%, #ffffff 10%, rgba(255, 255, 255, 0) 100%);
 }
 .swip_btn .gradient {
   position: sticky;
   flex-shrink: 0;
   padding: 0;
-  width: 10px;
+  width: 30px;
   border: none;
-}
-
-.swip_btn li {
-  text-align: center;
-  color: gray;
-  flex-shrink: 0;
-  margin-right: 10px;
+  z-index: 2;
 }
 
 .slide {
