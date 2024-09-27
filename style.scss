@@ -64,6 +64,23 @@ h4 {
 section {
   padding: $side-padding;
 }
+.btn {
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid rgb(212, 212, 212);
+  background-color: white;
+  cursor: pointer;
+  span {
+    font-weight: 500;
+    color: $cj-blue;
+  }
+
+  &:hover span {
+    color: #ef141d;
+    transition-duration: 0.3s;
+  }
+}
 
 // ---------
 header {
@@ -391,13 +408,10 @@ video {
 }
 .swip_btn li {
   text-align: center;
-  border: 1px solid rgb(212, 212, 212);
   color: gray;
-  border-radius: 5px;
-  padding: 10px;
   flex-shrink: 0;
   margin-right: 10px;
-  cursor: pointer;
+  @extend .btn;
 }
 
 .slide {
@@ -435,23 +449,6 @@ video {
   h3 {
     color: $main-color;
     padding: 10px 0;
-  }
-}
-
-.btn {
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-  border: 1px solid rgb(212, 212, 212);
-  background-color: white;
-  span {
-    font-weight: 500;
-    color: $cj-blue;
-  }
-
-  &:hover span {
-    color: #ef141d;
-    transition-duration: 0.3s;
   }
 }
 .ESG {
@@ -861,7 +858,6 @@ footer {
     flex-direction: column;
     gap: 10px;
     z-index: 5;
-    font-weight: 600;
   }
 }
 
@@ -878,6 +874,7 @@ footer {
   background-color: rgba(0, 0, 0, 0.3);
   box-shadow: 2px 2px 10px 0 rgb(117, 117, 117);
   transition: 0.2s;
+  font-weight: bold;
   &:hover {
     background-color: black;
   }
