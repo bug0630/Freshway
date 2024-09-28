@@ -35,6 +35,10 @@ body.no-scroll {
   color: #006ecd;
 }
 
+.green {
+  color: #005b45;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
@@ -165,7 +169,7 @@ header nav .gnb .lnb {
   left: 0;
   display: flex;
   justify-content: center;
-  background-color: #f5f5f5;
+  background-color: #f0f0f0;
   height: 0;
   overflow: hidden;
   box-shadow: 0 0 4px 0 rgb(87, 87, 87);
@@ -213,7 +217,7 @@ header .menu_nav {
   overflow: hidden;
   top: 0;
   display: flex;
-  background-color: #fff;
+  background-color: white;
   flex-direction: column;
 }
 @media (min-width: 1281px) {
@@ -288,7 +292,7 @@ header .menu_nav .fnb .lnb li {
   padding: 10px 0;
 }
 header .menu_aside {
-  background-color: #075d46;
+  background-color: #005b45;
   display: flex;
   align-items: center;
   min-width: 30%;
@@ -333,7 +337,7 @@ header .menu_nav_inner > div {
   width: 150px;
 }
 header .menu_nav_inner > div > a {
-  color: #075d46;
+  color: #005b45;
   font-size: 1.3em;
 }
 header .menu_nav_inner > div:nth-of-type(1) {
@@ -475,7 +479,7 @@ header .menu_nav_inner div ul li > a {
 }
 
 .ESG ul li {
-  color: #fff;
+  color: white;
   font-size: clamp(24px, 4vw, 36px);
   height: 250px;
   padding: clamp(20px, 3vw, 40px);
@@ -590,7 +594,7 @@ header .menu_nav_inner div ul li > a {
 }
 
 .IR {
-  background-color: #075d46;
+  background-color: #005b45;
   padding: 0;
   font-size: clamp(12px, 2vw, 16px);
 }
@@ -819,7 +823,7 @@ header .menu_nav_inner div ul li > a {
   overflow: hidden;
   box-shadow: 1px 1px 5px 0 rgb(141, 141, 141);
   text-align: center;
-  color: #075d46;
+  color: #005b45;
   position: relative;
   background-color: white;
 }
