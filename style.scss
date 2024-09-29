@@ -1,4 +1,4 @@
-$header-font: clamp(20px, 1.2vw, 24px);
+$header-font: clamp(16px, 1.2vw, 24px);
 $cj-yellow: #ff9700;
 $main-color: #005b45;
 $cj-blue: #006ecd;
@@ -95,13 +95,10 @@ header {
   box-shadow: 0 0 2px 0 gray;
   z-index: 10;
   background-color: rgba(36, 36, 36, 0.3);
-
   nav {
-    display: flex;
+    @extend .flex-between;
     padding: 0 $side-padding;
     height: 100%;
-    justify-content: space-between;
-    align-items: center;
     position: relative;
     color: white;
     &:hover {
@@ -109,23 +106,21 @@ header {
       color: black;
     }
     h1 {
-      width: 150px;
       height: 100%;
       z-index: 100;
       a,
       img {
+        display: block;
         height: 100%;
       }
     }
     .gnb {
+      @extend .flex-between;
       width: 100%;
       height: 100%;
       max-width: 800px;
       margin: 0 auto;
       overflow: hidden;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
       li {
         width: 100%;
         height: 100%;
@@ -863,15 +858,14 @@ footer {
     z-index: 5;
   }
 }
-
 .aside_btn {
   border-radius: 100%;
-  width: clamp(60px, 10vw, 75px);
+  width: clamp(60px, 8vw, 80px);
   aspect-ratio: 1/1;
-  font-size: clamp(12px, 2vw, 14px);
+  font-size: clamp(12px, 1.6vw, 16px);
   text-align: center;
   color: white;
-  line-height: 18px;
+  line-height: clamp(16px, 2.5vw, 20px);
   border: 1px solid rgba(240, 240, 240, 0.3);
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.3);
